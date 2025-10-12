@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>🔄 Circolo del Design 🔄</title>
-    <link rel="stylesheet" href="src/styles/style_cdd.css">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+ <meta charset="utf-8">
+ <title>🔄 Circolo del Design 🔄</title>
+ <link rel="stylesheet" href="src/styles/style_cdd.css">
+ <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
 </head>
 <body>
-    <h1 class="title-h1">CIRCOLO DEL DESIGN</h1>
+ <h1 class="title-h1">CIRCOLO DEL DESIGN</h1>
+ <div id="controlContainer">
+   <div class="bottone">
+     <button id="resetButton">MATERIAL</button>
+   </div>
+   <div class="container">
+     <div id="colorPickerContainer">
+       <div id="customColorPicker">
+         <div id="swatch"></div>
+         <input type="color" id="backgroundColorPicker" value="#ffed00">
+       </div>
+     </div>
+   </div>
+   <div class="bottone">
+     <a id="nextPageButton" href="/PORTFOLIO/">WHO I AM</a>
+   </div>
+ </div>
 
-    <div id="controlContainer">
-        <div class="bottone">
-            <button id="resetButton">MATERIAL</button>
-        </div>
-        <div class="container">
-            <div id="colorPickerContainer">
-    <div id="customColorPicker">
-        <div id="swatch"></div>
-        <input type="color" id="backgroundColorPicker" value="#ffed00">
-    </div>
-</div>
-        </div>
-        <div class="bottone">
-            <a id="nextPageButton" href="index.html">WHO I AM</a>
-        </div>
-    </div>
-    <script type="module" src="/scripts/script_cdd.js"></script>
+ <!-- Import map per Three.js -->
+ <script type="importmap">
+ {
+   "imports": {
+     "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+     "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+   }
+ }
+ </script>
+
+ <!-- Import map per Three.js -->
+ <script type="importmap">
+ {
+   "imports": {
+     "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+     "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+   }
+ }
+ </script>
+
+ <script type="module" src="/scripts/script_cdd.js"></script>
 </body>
 </html>
