@@ -56,18 +56,56 @@ controls.staticMoving = true;
 controls.dynamicDampingFactor = 0.3;
 camera.position.z = 330;
 
+// --- DETERMINAZIONE BASE PATH PER GITHUB PAGES ---
+// Questo funziona sia in locale che su GitHub Pages
+function getBasePath() {
+    // Se sei su GitHub Pages, il path sarà /nome-repo/
+    // In locale sarà /
+    const path = window.location.pathname;
+    const segments = path.split('/').filter(s => s);
+    
+    // Se siamo nella root o in una sottocartella
+    if (segments.length > 0 && !path.includes('.html')) {
+        return '/' + segments[0] + '/';
+    }
+    return '/';
+}
+
+const BASE_PATH = getBasePath();
+
 // --- ENVIRONMENT MAP ---
-const BASE_URL = import.meta.env.BASE_URL || '/';
-
 const cubeTextureLoader = new THREE.CubeTextureLoader();
-const envMap = cubeTextureLoader.setPath(`${BASE_URL}textures/cube/Bridge2/`).load([
-    'posx.jpg', 'negx.jpg',
-    'posy.jpg', 'negy.jpg',
-    'posz.jpg', 'negz.jpg'
-]);
+let envMap;
 
-envMap.colorSpace = THREE.SRGBColorSpace;
-scene.environment = envMap;
+// Prova a caricare le texture con gestione errori
+try {
+    envMap = cubeTextureLoader.setPath(`${BASE_PATH}textures/cube/Bridge2/`).load(
+        [
+            'posx.jpg', 'negx.jpg',
+            'posy.jpg', 'negy.jpg',
+            'posz.jpg', 'negz.jpg'
+        ],
+        // onLoad
+        () => {
+            console.log('Environment map caricata con successo');
+            envMap.colorSpace = THREE.SRGBColorSpace;
+            scene.environment = envMap;
+        },
+        // onProgress
+        undefined,
+        // onError
+        (error) => {
+            console.warn('Impossibile caricare environment map:', error);
+            console.log('Percorso tentato:', `${BASE_PATH}textures/cube/Bridge2/`);
+            // Continua senza environment map
+            envMap = null;
+            scene.environment = null;
+        }
+    );
+} catch (error) {
+    console.warn('Errore nel setup environment map:', error);
+    envMap = null;
+}
 
 // --- LUCI ---
 const ambientLight = new THREE.AmbientLight(0x404040, 1);
@@ -97,9 +135,12 @@ let gltfModel;
 let modelParent;
 const originalMaterials = new Map();
 
+console.log('Tentativo di caricamento modello da:', `${BASE_PATH}models/CDD_Logo_Estrusione.gltf`);
+
 loader.load(
-    `${BASE_URL}models/CDD_Logo_Estrusione.gltf`,
+    `${BASE_PATH}models/CDD_Logo_Estrusione.gltf`,
     (gltf) => {
+        console.log('Modello caricato con successo!');
         gltfModel = gltf.scene;
         const box = new THREE.Box3().setFromObject(gltfModel);
         const center = box.getCenter(new THREE.Vector3());
@@ -119,8 +160,16 @@ loader.load(
 
         updateResetButtonState();
     },
-    (xhr) => console.log((xhr.loaded / xhr.total * 100) + '% caricato'),
-    (error) => console.error('Errore nel caricamento del modello: ', error)
+    (xhr) => {
+        const percentComplete = (xhr.loaded / xhr.total * 100).toFixed(2);
+        console.log(percentComplete + '% caricato');
+    },
+    (error) => {
+        console.error('Errore nel caricamento del modello:', error);
+        console.error('Percorso tentato:', `${BASE_PATH}models/CDD_Logo_Estrusione.gltf`);
+        console.error('Base path corrente:', BASE_PATH);
+        console.error('Location:', window.location.href);
+    }
 );
 
 let usingOriginalMaterials = false;
@@ -134,8 +183,8 @@ function applyNewMaterials() {
                 color: 0xaaaaaa,
                 metalness: 1.0,
                 roughness: 0.05,
-                envMap: envMap,
-                envMapIntensity: 2.0,
+                envMap: envMap || null,
+                envMapIntensity: envMap ? 2.0 : 0,
                 clearcoat: 1.0,
                 clearcoatRoughness: 0.05
             });
@@ -144,7 +193,9 @@ function applyNewMaterials() {
             child.material.needsUpdate = true;
         }
     });
-    scene.environment = envMap;
+    if (envMap) {
+        scene.environment = envMap;
+    }
     setNewLighting();
     usingOriginalMaterials = false;
     updateResetButtonState();
