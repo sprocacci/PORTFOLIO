@@ -57,12 +57,15 @@ controls.dynamicDampingFactor = 0.3;
 camera.position.z = 330;
 
 // --- ENVIRONMENT MAP ---
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 const cubeTextureLoader = new THREE.CubeTextureLoader();
-const envMap = cubeTextureLoader.setPath('/textures/cube/Bridge2/').load([
+const envMap = cubeTextureLoader.setPath(`${BASE_URL}textures/cube/Bridge2/`).load([
     'posx.jpg', 'negx.jpg',
     'posy.jpg', 'negy.jpg',
     'posz.jpg', 'negz.jpg'
 ]);
+
 envMap.colorSpace = THREE.SRGBColorSpace;
 scene.environment = envMap;
 
@@ -95,7 +98,7 @@ let modelParent;
 const originalMaterials = new Map();
 
 loader.load(
-    'models/CDD_Logo_Estrusione.gltf',
+    `${BASE_URL}models/CDD_Logo_Estrusione.gltf`,
     (gltf) => {
         gltfModel = gltf.scene;
         const box = new THREE.Box3().setFromObject(gltfModel);
