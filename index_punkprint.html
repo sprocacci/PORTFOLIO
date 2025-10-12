@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👾 \m/ PUNK PRINT \m/ 👾</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <link rel="stylesheet" crossorigin href="/PORTFOLIO/assets/punkprint-C2b10h6U.css">
+</head>
+<body>
+  <h1 class="title-h1">\m/ 10 PUNK PRINT \m/</h1>
+  <div id="videoContainer"></div>
+  <div id="controlContainer">
+    <div class="container">
+      <input type="file" id="videoUpload" accept="video/*" class="custom-file-upload">
+      <label id="videoUploadLabel" for="videoUpload">UPLOAD VIDEO</label>
+    </div>
+    <div class="container">
+      <button id="patternButton">PATTERN</button>
+    </div>
+    <div class="container">
+      <div id="customColorPicker">
+        <div id="colorSwatch"></div>
+        <input type="color" id="colorPicker" value="#FF00FF">
+      </div>
+    </div>
+    <div class="container">
+      <div id="outlineColorPickerContainer">
+        <div id="customOutlineColorPicker">
+          <div id="outlineSwatch"></div>
+          <input type="color" id="outlineColorPicker" value="#FF2600">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <input type="range" id="patternSlider" min="0" max="255" value="127">
+    </div>
+    <div class="bottone">
+      <a id="nextPageButton" href="index.html">WHO I AM</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="src/scripts/script_punkprint.js"></script>
+</body>
+</html>
