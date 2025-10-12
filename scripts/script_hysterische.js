@@ -63,7 +63,7 @@ $(document).ready(function() {
     }
 
     // Caricamento dei dati delle immagini dal file JSON
-    $.getJSON('image.json', function(data) {
+    $.getJSON('./image.json', function(data) {
         images = data; // Assegna i dati delle immagini alla variabile images
 
         // Funzione per ridimensionare il canvas

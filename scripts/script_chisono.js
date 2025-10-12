@@ -506,7 +506,7 @@ var intervalloImmaginiSet3 = null;
 function caricaImmaginiJSON(callback) {
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
-    xhr.open('GET', 'image.json', true);
+    xhr.open('GET', './image.json', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             immaginiJSON = JSON.parse(xhr.responseText).map(item => item.URL);
@@ -749,12 +749,12 @@ document.addEventListener('DOMContentLoaded', function () {
     preloadImage(hoverDefault);
     [   
         //NWA
-        'immagini/alta/NEWMEDIART_alta.jpg',
-        'immagini/alta/NEWMEDIART_alta2.jpg',
-        'immagini/alta/NEWMEDIART_alta3.jpg',
-        'immagini/alta/NEWMEDIART_alta4.jpg',
-        'immagini/alta/NEWMEDIART_alta5.jpg',
-        'immagini/alta/NEWMEDIART_alta6.jpg',
+        'immagini/alta/NWA/NEWMEDIART_alta.jpg',
+        'immagini/alta/NWA/NEWMEDIART_alta2.jpg',
+        'immagini/alta/NWA/NEWMEDIART_alta3.jpg',
+        'immagini/alta/NWA/NEWMEDIART_alta4.jpg',
+        'immagini/alta/NWA/NEWMEDIART_alta5.jpg',
+        'immagini/alta/NWA/NEWMEDIART_alta6.jpg',
 
         //CLUSTER
         'immagini/alta/CLUSTER/CLUSTER_alta.jpg',
@@ -784,7 +784,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'immagini/alta/ATEMPO/ATEMPO_alta2.jpg',
         'immagini/alta/ATEMPO/ATEMPO_alta3.jpg',
         'immagini/alta/ATEMPO/ATEMPO_alta4.jpg',
-        'immagini/alta/ATEMPO/ATEMPO_alta5jpg',
+        'immagini/alta/ATEMPO/ATEMPO_alta5.jpg',
         'immagini/alta/ATEMPO/ATEMPO_alta6.jpg',
         'immagini/alta/ATEMPO/ATEMPO_alta7.jpg',
         //'immagini/alta/ATEMPO_alta8.jpg',
@@ -802,8 +802,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'immagini/alta/ORLANDO/ORLANDO_alta4.jpg',
         'immagini/alta/ORLANDO/ORLANDO_alta5.jpg',
         'immagini/alta/ORLANDO/ORLANDO_alta6.jpg',
-        'immagini/alta/ORLANDO/ORLANDO_alta7.jpg',
-        'immagini/alta/ORLANDO/ORLANDO_alta8.jpg',
+        //'immagini/alta/ORLANDO/ORLANDO_alta7.jpg',
+        //'immagini/alta/ORLANDO/ORLANDO_alta8.jpg',
 
         //ARCAICO
         'immagini/alta/ARCAICO/ARCAICO_alta.jpg',
@@ -815,7 +815,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'immagini/alta/ARCAICO/ARCAICO_alta7.jpg',
 
         //AKOH
-        'immagini/alta/AKOH/AKOH_alta.jpg',
+        //'immagini/alta/AKOH/AKOH_alta.jpg',
         'immagini/alta/AKOH/AKOH_alta2.jpg',
         'immagini/alta/AKOH/AKOH_alta3.jpg',
         'immagini/alta/AKOH/AKOH_alta4.jpg',
@@ -829,6 +829,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'immagini/alta/VIVIDA/VIVIDA_alta.jpg',
 
         //TNF
+        //nessuna perchè uso gif
 
     ].forEach(preloadImage);
 
