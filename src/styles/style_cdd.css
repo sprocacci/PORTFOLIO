@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'M+1M';
+    src: url('../fonts/XanhMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Suisse Works';
+    src: url('../fonts/Giulia Boggio - Bastardo Groteskish Regular.otf') format('opentype');
+}
+
+.title-h1 {
+    font-family: 'Suisse Works', serif;
+    font-size: 48px;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    pointer-events: none;
+}
+
+body {
+    font-family: 'M+1M', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffed00;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#controlContainer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 15;
+}
+
+.container {
+    margin-top: -1px;
+}
+
+
+#nextPageButton {
+      font-family: 'M+1M', monospace;
+    border: 1px solid white;
+    margin-top: -1px;
+    font-size: 14px;
+    height: 29px;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#nextPageButton:hover {
+    background-color: white !important;
+    color: black !important;
+    cursor: pointer;
+}
+
+#resetButton {
+    font-family: 'M+1M', monospace;
+    border: 1px solid white;
+    font-size: 14px;
+    height: 29px;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#resetButton:active {
+    margin-top: -1px;
+    background-color: white;
+    outline: 1px solid white;
+    color: black;
+    border: none;
+}
+
+/* Container per il color picker custom */
+#customColorPicker {
+    margin-top: -1px;
+    position: relative;
+    width: 100%;
+    height: 29px; /* stessa altezza del tuo input */
+    border: 1px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'M+1M', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffed00; /* colore iniziale */
+}
+
+/* Swatch visibile con stile personalizzato */
+#swatch {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 29px; /* centratura verticale */
+    font-family: 'M+1M', monospace;
+    color: black;
+}
+
+/* Input color invisibile ma cliccabile */
+#backgroundColorPicker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'M+1M';
+  src: url('../fonts/XanhMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'BASTARDO';
+  src: url('../fonts/Giulia Boggio - Bastardo Groteskish Regular.otf') format('opentype');
+}
+body {
+  background-color: black !important;
+  color: white !important;
+  font-family: 'M+1M', monospace;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: 'BASTARDO', serif;
+  font-size: 48px;
+  margin: 10px;
+}
+canvas {
+  max-height: calc(80vh - 100px);
+  max-width: 72vw;
+  display: block;
+}
+.container {
+  margin-top: -1px;
+}
+#videoContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#controlContainer {
+  position: fixed;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
+}
+#patternButton:active {
+  background-color: white;
+  color: black;
+}
+#videoUpload {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+#videoUploadLabel {
+  color: white;
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 29px;
+  box-sizing: border-box;
+}
+#videoUploadLabel:active {
+  background-color: white;
+  color: black;
+}
+#patternButton {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  height: 29px;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border: 1px solid white;
+  outline: none;
+}
+
+/* --- CONTAINER COLOR PICKER PERSONALIZZATO --- */
+#customColorPicker,
+#customOutlineColorPicker {
+  margin-top: -1px;
+  position: relative;
+  width: 100%;
+  height: 29px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'M+1M', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Colore iniziale per pattern color picker */
+#customColorPicker {
+  background-color: #FF00FF;
+}
+
+/* Colore iniziale per outline color picker */
+#customOutlineColorPicker {
+  background-color: #FF2600;
+}
+
+/* Swatch visibile con stile personalizzato */
+#colorSwatch,
+#outlineSwatch {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 29px;
+  font-family: 'M+1M', monospace;
+  color: black;
+}
+
+/* Input color invisibile ma cliccabile */
+#colorPicker,
+#outlineColorPicker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#outlineColorPickerContainer {
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+
+#patternSlider {
+  width: 100%;
+  box-sizing: border-box;
+  height: 29px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: black;
+  outline: none;
+  border: 1px solid white;
+  padding: 0;
+  margin: 0;
+}
+#patternSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2px;
+  height: 29px;
+  background-color: white;
+  cursor: pointer;
+  border: 0;
+}
+#patternSlider::-moz-range-thumb {
+  width: 2px;
+  height: 29px;
+  background-color: white;
+  cursor: pointer;
+  border: 0;
+}
+#nextPageButton {
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 4.75px;
+  font-family: 'M+1M', monospace;
+  margin-top: -5px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+#nextPageButton:hover {
+  background-color: white !important;
+  color: black !important;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,377 @@
+/* Font */
+@font-face {
+  font-family: 'BASTARDO';
+  src: url('../fonts/Giulia Boggio - Bastardo Groteskish Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'M+1M';
+  src: url('../fonts/XanhMono-Regular.ttf') format('truetype');
+}
+
+/* Reset e utilità */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Titolo */
+h1 {
+  font-family: 'BASTARDO', serif;
+  font-size: 48px;
+  margin: 0px;
+  text-align: center;
+  background-color: transparent;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 100%;
+  pointer-events: none; 
+}
+
+/* Centro contenuti */
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  height: 100px;
+  justify-content: center;
+}
+
+/* Immagini randomizzate */
+.randomized-image {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+  z-index: 15;
+  filter: none;
+  background-color: transparent;
+}
+
+/* Immagine principale centrata */
+#Immagine_Centrata {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 15;
+}
+
+/* Immagine fullscreen */
+#Immagine_Sottostante.fullscreen {
+  display: block !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+  object-fit: cover !important;
+  z-index: 10 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  pointer-events: none;
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
+/* Testo dinamico */
+.testo {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  position: absolute;
+  z-index: 20;
+  max-width: 1200px;
+  text-align: center;
+  line-height: 1.2;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  pointer-events: none;
+}
+
+.testo a,
+.testo button {
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+}
+
+.testo a:hover,
+.testo button:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.testo a:visited {
+  color: purple;
+}
+
+/* Bottoni */
+.bottone {
+  margin-top: -1px;
+  width: 100%;
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Bottoni extra */
+.bottone-extra {
+  position: absolute;
+  top: calc(100vh + (var(--button-index) - 1) * 28px);
+  width: 100%;
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  z-index: 5;
+}
+
+/* Variabili per bottoni extra */
+.bottone-extra[data-index="1"] { --button-index: 1; }
+.bottone-extra[data-index="2"] { --button-index: 2; }
+.bottone-extra[data-index="3"] { --button-index: 3; }
+.bottone-extra[data-index="4"] { --button-index: 4; }
+.bottone-extra[data-index="5"] { --button-index: 5; }
+.bottone-extra[data-index="6"] { --button-index: 6; }
+.bottone-extra[data-index="7"] { --button-index: 7; }
+.bottone-extra[data-index="8"] { --button-index: 8; }
+.bottone-extra[data-index="9"] { --button-index: 9; }
+.bottone-extra[data-index="10"] { --button-index: 10; }
+
+.back-button, 
+.link-button {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  width: 100%;
+  height: 29px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  position: relative;
+}
+
+.back-button:hover, 
+.link-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.selected {
+  background-color: black;
+  color: white;
+}
+
+/* ================= NAVIGAZIONE TASTIERA ================= */
+.keyboard-selected {
+  background-color: black !important;
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid black !important;
+}
+
+/* Override per bottoni selezionati durante navigazione tastiera */
+.back-button.keyboard-selected,
+.link-button.keyboard-selected {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid black !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Rimuovi tutti gli effetti di focus predefiniti */
+.back-button:focus,
+.link-button:focus,
+.back-button:focus-visible,
+.link-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Bottoni inline nel testo */
+.inline-button {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 2px;
+  pointer-events: auto;
+  display: inline;
+  text-decoration: underline;
+}
+
+.inline-button:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.inline-button:visited {
+  color: purple;
+}
+
+/* Immagini dei set (unificate) */
+.immagine-set {
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120px);
+  z-index: 15;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.link-image {
+  cursor: pointer;
+}
+
+/* Riga bottoni testo */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 23px);
+  margin: 0;
+  padding: 0 8px;
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  pointer-events: none;
+  color: black !important;
+}
+
+/* Quando c'è un solo bottone, centralo */
+.button-row:has(:only-child) {
+  justify-content: center;
+  color: black !important;
+}
+
+.button-row .inline-button {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  pointer-events: auto;
+  color: black !important;
+}
+
+.button-row .inline-button:hover {
+  text-decoration: none;
+  color: black !important;
+}
+
+.button-row .inline-button:visited {
+  color: purple !important;
+}
+
+/* Video fullscreen */
+#hover-video.fullscreen {
+  display: block !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+  object-fit: cover !important;
+  z-index: 10 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  pointer-events: none;
+}
+
+/* Footer copyright */
+.copyright-footer {
+  font-family: 'BASTARDO', serif;
+  font-size: 13px;
+  position: absolute;
+  top: 4px;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  padding: 6px;
+}
+
+/* Keywords container */
+.keywords-container {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 100%;
+  pointer-events: none;
+  display: block;
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 0 8px;
+  width: calc(100vw - 23px);
+}
+
+.keyword {
+  display: block;
+  background-color: transparent;
+  color: black;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+/* Quando la keyword contiene una sola parola, centrala */
+.keyword.single-word {
+  text-align: center;
+  text-align-last: center;
+}
