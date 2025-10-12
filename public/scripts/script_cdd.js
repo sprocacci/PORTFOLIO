@@ -56,22 +56,13 @@ controls.staticMoving = true;
 controls.dynamicDampingFactor = 0.3;
 camera.position.z = 330;
 
-// --- DETERMINAZIONE BASE PATH PER GITHUB PAGES ---
-// Questo funziona sia in locale che su GitHub Pages
-function getBasePath() {
-    // Se sei su GitHub Pages, il path sarà /nome-repo/
-    // In locale sarà /
-    const path = window.location.pathname;
-    const segments = path.split('/').filter(s => s);
-    
-    // Se siamo nella root o in una sottocartella
-    if (segments.length > 0 && !path.includes('.html')) {
-        return '/' + segments[0] + '/';
-    }
-    return '/';
-}
+// --- DETERMINAZIONE BASE PATH ---
+// Usa il BASE_URL da Vite se disponibile, altrimenti detecta GitHub Pages
+const BASE_PATH = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) 
+    ? import.meta.env.BASE_URL 
+    : (window.location.hostname.includes('github.io') ? '/PORTFOLIO/' : '/');
 
-const BASE_PATH = getBasePath();
+console.log('Base path impostato:', BASE_PATH);
 
 // --- ENVIRONMENT MAP ---
 const cubeTextureLoader = new THREE.CubeTextureLoader();
