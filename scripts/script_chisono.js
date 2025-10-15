@@ -493,9 +493,15 @@ function preloadVideo(key, src) {
     video.muted = true;
     video.playsInline = true;
     video.preload = 'auto';
+    video.crossOrigin = 'anonymous'; // Aiuta con la cache
+    
+    // Forza il caricamento completo
+    video.addEventListener('loadeddata', () => {
+        console.log(`Video ${key} preloaded`);
+    });
+    
     video.load();
     video.style.display = 'none';
-    document.body.appendChild(video);
     videoCache[key] = video;
 }
 
@@ -560,32 +566,163 @@ function randomizeImagePositions(container) {
     const margin = 10;
     const occupied = [];
 
-    images.forEach(img => {
-        let placed = false, attempts = 0;
-        while (!placed && attempts < 100) {
-            const maxX = viewportWidth - imageSize;
-            const maxY = viewportHeight - imageSize;
-            const x = Math.random() * maxX;
-            const y = Math.random() * maxY;
+    // Funzione helper per ottenere coordinate assolute
+    function getAbsoluteRect(element) {
+        const rect = element.getBoundingClientRect();
+        return {
+            left: rect.left + window.pageXOffset,
+            top: rect.top + window.pageYOffset,
+            right: rect.right + window.pageXOffset,
+            bottom: rect.bottom + window.pageYOffset,
+            width: rect.width,
+            height: rect.height
+        };
+    }
+    
+    // Ottieni le aree occupate dai testi
+    const testoContenuto = document.getElementById('testo-contenuto');
+    const titolo = document.getElementById('titolo-h1');
+    const keywordsContainer = document.getElementById('keywords-container');
+    
+    const safetyMargin = margin * 4;
+    
+    if (testoContenuto && testoContenuto.offsetParent !== null) {
+        const rect = getAbsoluteRect(testoContenuto);
+        occupied.push({
+            left: rect.left - safetyMargin,
+            top: rect.top - safetyMargin,
+            right: rect.right + safetyMargin,
+            bottom: rect.bottom + safetyMargin
+        });
+    }
+    
+    if (titolo && titolo.offsetParent !== null) {
+        const rect = getAbsoluteRect(titolo);
+        occupied.push({
+            left: rect.left - safetyMargin,
+            top: rect.top - safetyMargin,
+            right: rect.right + safetyMargin,
+            bottom: rect.bottom + safetyMargin
+        });
+    }
+    
+    if (keywordsContainer && !keywordsContainer.classList.contains('hidden') && keywordsContainer.offsetParent !== null) {
+        const rect = getAbsoluteRect(keywordsContainer);
+        occupied.push({
+            left: rect.left - safetyMargin,
+            top: rect.top - safetyMargin,
+            right: rect.right + safetyMargin,
+            bottom: rect.bottom + safetyMargin
+        });
+    }
 
-            const overlap = occupied.some(pos => (
-                x < pos.right + margin &&
-                x + imageSize + margin > pos.left &&
-                y < pos.bottom + margin &&
-                y + imageSize + margin > pos.top
-            ));
-
-            if (!overlap) {
-                img.style.left = x + 'px';
-                img.style.top = y + 'px';
-                occupied.push({ left: x, top: y, right: x + imageSize, bottom: y + imageSize });
-                placed = true;
-            }
-            attempts++;
+    // NUOVA STRATEGIA: Dividi lo schermo in griglia e distribuisci uniformemente
+    const numImages = images.length;
+    const cols = Math.ceil(Math.sqrt(numImages * (viewportWidth / viewportHeight)));
+    const rows = Math.ceil(numImages / cols);
+    
+    // Crea array di celle disponibili
+    const cells = [];
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            cells.push({ row, col });
         }
+    }
+    
+    // Mescola le celle per distribuzione randomica ma uniforme
+    for (let i = cells.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cells[i], cells[j]] = [cells[j], cells[i]];
+    }
+    
+    const cellWidth = viewportWidth / cols;
+    const cellHeight = viewportHeight / rows;
+    
+    // Posiziona le immagini
+    images.forEach((img, index) => {
+        let placed = false;
+        let attempts = 0;
+        const maxAttempts = 50;
+        
+        // Prova prima con la cella assegnata
+        if (index < cells.length) {
+            const cell = cells[index];
+            
+            while (!placed && attempts < maxAttempts) {
+                // Posizione randomica all'interno della cella
+                const cellX = cell.col * cellWidth;
+                const cellY = cell.row * cellHeight;
+                
+                // Aggiungi variazione randomica dentro la cella (80% della dimensione per evitare bordi)
+                const randomX = cellX + Math.random() * (cellWidth - imageSize) * 0.8 + (cellWidth * 0.1);
+                const randomY = cellY + Math.random() * (cellHeight - imageSize) * 0.8 + (cellHeight * 0.1);
+                
+                const x = randomX + window.pageXOffset;
+                const y = randomY + window.pageYOffset;
+
+                const overlap = occupied.some(pos => (
+                    x < pos.right + margin &&
+                    x + imageSize + margin > pos.left &&
+                    y < pos.bottom + margin &&
+                    y + imageSize + margin > pos.top
+                ));
+
+                if (!overlap) {
+                    img.style.left = x + 'px';
+                    img.style.top = y + 'px';
+                    occupied.push({ 
+                        left: x, 
+                        top: y, 
+                        right: x + imageSize, 
+                        bottom: y + imageSize 
+                    });
+                    placed = true;
+                }
+                attempts++;
+            }
+        }
+        
+        // Se non è riuscito con la cella, prova posizionamento casuale globale
         if (!placed) {
-            img.style.left = Math.random() * (viewportWidth - imageSize) + 'px';
-            img.style.top = Math.random() * (viewportHeight - imageSize) + 'px';
+            attempts = 0;
+            while (!placed && attempts < 100) {
+                const x = Math.random() * (viewportWidth - imageSize) + window.pageXOffset;
+                const y = Math.random() * (viewportHeight - imageSize) + window.pageYOffset;
+
+                const overlap = occupied.some(pos => (
+                    x < pos.right + margin &&
+                    x + imageSize + margin > pos.left &&
+                    y < pos.bottom + margin &&
+                    y + imageSize + margin > pos.top
+                ));
+
+                if (!overlap) {
+                    img.style.left = x + 'px';
+                    img.style.top = y + 'px';
+                    occupied.push({ 
+                        left: x, 
+                        top: y, 
+                        right: x + imageSize, 
+                        bottom: y + imageSize 
+                    });
+                    placed = true;
+                }
+                attempts++;
+            }
+        }
+        
+        // Ultimo fallback: posiziona negli angoli
+        if (!placed) {
+            const corners = [
+                { x: margin, y: margin }, // Alto-Sinistra
+                { x: viewportWidth - imageSize - margin, y: margin }, // Alto-Destra
+                { x: margin, y: viewportHeight - imageSize - margin }, // Basso-Sinistra
+                { x: viewportWidth - imageSize - margin, y: viewportHeight - imageSize - margin } // Basso-Destra
+            ];
+            
+            const corner = corners[index % corners.length];
+            img.style.left = (corner.x + window.pageXOffset) + 'px';
+            img.style.top = (corner.y + window.pageYOffset) + 'px';
         }
     });
 }
@@ -619,9 +756,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function showHoverVideo(videoKey) {
         disableScroll();
         
-        const existingVideo = document.getElementById('hover-video');
-        if (existingVideo) {
-            existingVideo.remove();
+        let displayVideo = document.getElementById('hover-video');
+        
+        // Se il video esiste già e corrisponde alla stessa key, riutilizzalo
+        if (displayVideo && displayVideo.dataset.videoKey === videoKey) {
+            displayVideo.style.display = 'block';
+            displayVideo.classList.add('fullscreen');
+            displayVideo.currentTime = 0;
+            displayVideo.play().catch(e => console.log('Play error:', e));
+            return;
+        }
+        
+        // Rimuovi il video esistente se diverso
+        if (displayVideo) {
+            displayVideo.remove();
         }
         
         const video = videoCache[videoKey];
@@ -630,8 +778,10 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         
-        const displayVideo = video.cloneNode(true);
+        // Usa direttamente il video dalla cache invece di clonarlo
+        displayVideo = video;
         displayVideo.id = 'hover-video';
+        displayVideo.dataset.videoKey = videoKey;
         displayVideo.style.display = 'block';
         displayVideo.style.position = 'fixed';
         displayVideo.style.left = '50%';
@@ -640,15 +790,17 @@ document.addEventListener('DOMContentLoaded', function () {
         displayVideo.style.maxWidth = '100%';
         displayVideo.style.maxHeight = '100%';
         displayVideo.classList.add('fullscreen');
-        displayVideo.autoplay = true;
         displayVideo.loop = true;
         displayVideo.currentTime = 0;
-        displayVideo.play();
         
-        document.body.appendChild(displayVideo);
+        if (!displayVideo.parentElement) {
+            document.body.appendChild(displayVideo);
+        }
+        
+        displayVideo.play().catch(e => console.log('Play error:', e));
     }
     
-    function hideHoverMedia() {
+        function hideHoverMedia() {
         enableScroll();
         
         if (imgHover) {
@@ -660,8 +812,10 @@ document.addEventListener('DOMContentLoaded', function () {
         
         const v = document.getElementById('hover-video');
         if (v) { 
-            v.pause(); 
-            v.remove(); 
+            v.pause();
+            v.style.display = 'none';
+            v.classList.remove('fullscreen');
+            // Non rimuoverlo, nascondilo solo per riutilizzarlo
         }
     }
 
@@ -1287,7 +1441,7 @@ function cambiaContenuto(set) {
     const testoSet7 = `<p>
         "Can AI unlock your creativity?" is the format of the workshop on Artificial Intelligence held by the Art Director and the Creative Technologist of 
         <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>. 
-        At the end of the course, students are able to understand the basic principles of AI, master tools such as Midjourney, and apply the acquired knowledge to respond to a brief: the students had to respond to the request to make free-themed short films, that were made with the integration of more AI tools together. The video is designed as a reel of a promotional campaign for the launch of three new products by The North Face brand. The medium has established the vertical format of the short film to better adapt to mobile devices.
+        At the end of the course, I was able to understand the basic principles of AI, master tools such as Midjourney, and apply the acquired knowledge to respond to a brief: it was requested to me to make a free-themed short film, that were made with the integration of more AI tools together. The video is made as a reel for the launch of three new products designed by The North Face. The medium has established the vertical format of the short film to better adapt to mobile devices.
         <br />
         <div class="button-row">
             <a href="https://vimeo.com/1125189923?share=copy" target="_blank" class="inline-link">VIEW PROJECT</a>`;
@@ -1315,7 +1469,7 @@ function cambiaContenuto(set) {
         <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VIEW PROJECT</button>`; 
         
     const testoSet12 = `<p>
-        <br />The project saw the design and display of three large posters on the external facades of the three libraries: Alberto Geisser, Natalia Ginzburg and Dietrich Bonhoeffer in Turin (TO).
+        The project saw the design and display of three large posters on the external facades of the three libraries: Alberto Geisser, Natalia Ginzburg and Dietrich Bonhoeffer in Turin (TO).
         The exhibition     
         <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
         is carried out under the artistic direction of 

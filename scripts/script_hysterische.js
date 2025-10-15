@@ -234,9 +234,9 @@ $(document).ready(function() {
             var splitVal = $('#split').val(); // Numero di divisioni specificato dall'utente
             if (splitVal < 1 || splitVal > 100 || isNaN(splitVal)) {
                 $('#split').val(''); // Pulisci l'input
-                $('#split').attr('placeholder', 'INSERIRE UN VALORE 1 A 100'); // Mostra il messaggio di avviso
+                $('#split').attr('placeholder', 'INSERT VALUE FROM 1 TO 100'); // Mostra il messaggio di avviso
             } else {
-                $('#split').attr('placeholder', 'NUMERO DI PORZIONI'); // Ripristina il messaggio predefinito
+                $('#split').attr('placeholder', 'PORTION NUMBER'); // Ripristina il messaggio predefinito
                 clearCanvasAndImages(); // Cancella completamente il canvas e le immagini attualmente caricate
                 mixImages(); // Avvia il mix and match dopo che il canvas è stato cancellato
                 toggleButtonColors(); // Cambia il colore del pulsante "GENERA"
@@ -260,7 +260,7 @@ $(document).ready(function() {
                 var splitVal = $('#split').val(); // Numero di divisioni specificato dall'utente
                 if (splitVal < 1 || splitVal > 100 || isNaN(splitVal)) {
                     $('#split').val(''); // Pulisci l'input
-                    $('#split').attr('placeholder', 'INSERIRE UN VALORE 1 A 100'); // Mostra il messaggio di avviso
+                    $('#split').attr('placeholder', 'INSERT VALUE FROM 1 TO 100'); // Mostra il messaggio di avviso
                 } else {
                     mixImages(); // Avvia il mix and match
                 }
@@ -334,7 +334,7 @@ $(document).ready(function() {
 
     // Gestisce l'evento di cambiamento dell'input per nascondere il messaggio di avviso
     $('#split').on('input', function() {
-        $('#split').attr('placeholder', 'NUMERO DI PORZIONI'); // Ripristina il messaggio predefinito
+        $('#split').attr('placeholder', 'PORTION NUMBER'); // Ripristina il messaggio predefinito
     });
 });
 
