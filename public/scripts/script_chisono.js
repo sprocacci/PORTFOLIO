@@ -1371,28 +1371,29 @@ function cambiaContenuto(set) {
 
     // TESTI SET
     const testoSet1 = `<p>
-        Cluter is an interactive installation that evokes the imagery of the cosmos and galaxies: the project is characterized by many luminous particles that react to the user's interaction. Through hand movements it is possible to control gravity by modifying the forces of the surrounding space: through simple gestures you have control of the forces that permeate the space around us.
-        The project was developed during a workshop with Laura Arcangeli from studio
+        Cluter is an interactive installation that evokes the imagery of the cosmos and galaxies. 
+        The project features countless luminous particles reacting to user movements. 
+        By moving your hands, you can control gravity and shape the forces of the surrounding space.
+        Developed during a workshop with Laura Arcangeli from Studio 
         <a href="https://ultraviolet.to/" target="_blank" class="inline-link">Ultravioletto</a>.
         <div class="button-row">`;
 
     const testoSet2 = `<p>
-        The thesis project is further expanded and developed in collaboration 
-        <br />with the 
+        The thesis was further developed in collaboration with
         <a href="https://www.ulissegallery.com/index.html" target="_blank" class="inline-link">Ulisse Gallery Contemporary Art</a>
-        in Rome. It is an exhibition space of 350 square meters 
-        <br />located just a few steps from Piazza di Spagna. The gallery has worked alongside some of the greatest 
-        <br />international artists including Maestro Ugo Attardi of whom they hold the entire Historical Archive. 
-        <br />The work has been selected among the 100 innovative projects for NEOLOGIA, the 2023 edition of Graphic Days in Turin.
+         in Rome, a 350 m² exhibition space near Piazza di Spagna. 
+         The gallery has worked with major international artists, including Maestro Ugo Attardi, whose Historical Archive it holds. 
+        The project was selected among the 100 innovative works at NEOLOGIA, Graphic Days 2023 in Turin.
         <br /><br /><a href="https://www.graphicdays.it/neologia/new-media-art-come-il-computer-ha-rivoluzionato-il-mondo-sirio-procacci/()" target="_blank" class="inline-button">VIEW PROJECT</button>
         <div class="button-row"> `;
 
     const testoSet3 = `<p> 
         [8583 Hysterische Postkarten] is a project based on the Austrian archive 
         <a href="https://labs.onb.ac.at/en/datasets/akon/" target="_blank" class="inline-link">Historical Postcards</a>.
-        <br />Here you can create unique and surreal collages.
+        It draws inspiration from Bruno Munari’s "Saluti e Baci" series.
+        Here you can create unique and surreal collages.
         <br /><br />- Enter a value from 1 to 100;
-        <br />- Use the "☞ GENERATE ☜" button or the "ENTER" key;
+        <br />- Use the "GENERATE" button or the "ENTER" key;
         <br />- Use the mouse to view the information;
         <br />- Click on the portion you want to view.
         <br />
@@ -1400,11 +1401,9 @@ function cambiaContenuto(set) {
         <button onclick="redirectToHysterischePage()" class="inline-button">VIEW PROJECT</button>`;
 
     const testoSet4 = `<p>
-        The project draws inspiration from the historic "10 PRINT" string 
-        <br />to explore the relationship between randomness, creativity, and digital complexity: 
-        <br />By transforming videos into visual patterns, the project investigates new forms of representation 
-        <br />that make content less identifiable and difficult to censor.
-        The app only supports .mp4 video formats, so please don't be an a**hole!
+        This project takes inspiration from the classic “10 PRINT” code to explore randomness, creativity, and digital complexity. 
+        By turning videos into visual patterns, it investigates new forms of representation that make content harder to identify or censor.
+        <br />The app only supports .mp4 video so please don't be an a**hole!
         <br />If you've been a good boy, now you can play with colors and patterns!
         <br />Who's my good boy?
         <br />
@@ -1413,10 +1412,10 @@ function cambiaContenuto(set) {
             <button onclick="redirectTo10PPGitPage()" class="inline-button">MORE INFO</button>`;
 
     const testoSet5 = `<p>
-        Application created for the development of video identity 
-        <a href="https://www.circolodeldesign.it/" target="_blank" class="inline-link">Circolo del Design</a>.
-        It allows you to actively interact with the 3D model of the CDD logo.
-        Project developed under the art direction of
+        An interactive application designed to develop 
+        <a href="https://www.circolodeldesign.it/" target="_blank" class="inline-link">Circolo del Design</a>'s
+        video identity. It lets users interact in real time with a 3D model of the CDD logo.
+        Developed under the art direction of
         <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
         </p>
         <div class="button-row">
@@ -1424,69 +1423,79 @@ function cambiaContenuto(set) {
             <button onclick="redirectToCDDVideo()" class="inline-button">VIEW VIDEO</button>`;
 
     const testoSet6 = `<p>
-        Pesaro makes a sound; and this sound is urban. It's music changes with the shifting of space and time: 
-        the city transforms from its industrial outskirts to its squares, extending to the coast, where architectures overlook the Adriatic. 
-        Nature takes shape among the city's lines and materials (culture), creating a sound that connects two previously opposing categories. 
-        It's a sound that changes and can be mapped, enabling an orientation within the city itself. 
-        What governs everything, in general, is mathematics. "0721" is an exhibition project developed in collaboration with 
-        the 
+        Pesaro makes a sound and it’s urban. 
+        Its rhythm shifts with space and time, from the industrial outskirts to the coast where architecture meets the Adriatic.
+        Nature weaves through the city’s forms, blending culture and environment into a sound that can be mapped and explored.
+        At its core, everything follows mathematics.
+        “0721” is an exhibition project developed with the 
         <a href="https://www.comune.pesaro.pu.it/turismo/dettaglio/news/storie-e-geografie/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=fd8ba27f281f902ae5092e4a562d5607" target="_blank" class="inline-link">Municipality of Pesaro</a> 
         and 
         <a href="https://pesaromusei.it/guide/nbart-opere-di-gio-ross-2-3-2-2-2-2/" target="_blank" class="inline-link">Pesaro Musei</a>
-        for "Pesaro Italian Capital of Culture 2024." It includes urban installations and an indoor exhibition 
-        at 
+        for "Pesaro Italian Capital of Culture 2024" featuring both urban and indoor installations at 
         <a href="https://pesaromusei.it/pescheria-centro-arti-visive/" target="_blank" class="inline-link">Pescheria Centro Arti Visive</a>.
         <div class="button-row">`;
 
     const testoSet7 = `<p>
-        "Can AI unlock your creativity?" is the format of the workshop on Artificial Intelligence held by the Art Director and the Creative Technologist of 
-        <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>. 
-        At the end of the course, I was able to understand the basic principles of AI, master tools such as Midjourney, and apply the acquired knowledge to respond to a brief: it was requested to me to make a free-themed short film, that were made with the integration of more AI tools together. The video is made as a reel for the launch of three new products designed by The North Face. The medium has established the vertical format of the short film to better adapt to mobile devices.
+        “Can AI Unlock Your Creativity?” was a workshop on Artificial Intelligence led by 
+        <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>'s 
+        By the end, I had grasped AI fundamentals, learned tools like Midjourney, and created a short film combining several AI systems. 
+        The video was produced in a vertical format for mobile viewing as a reel for the launch of three new products designed by The North Face.
         <br />
         <div class="button-row">
             <a href="https://vimeo.com/1125189923?share=copy" target="_blank" class="inline-link">VIEW PROJECT</a>`;
 
     const testoSet8 = `<p>
-        O'Bucket is a product/service designed to address the pollution caused by Expanded Polystyrene (EPS) commonly used in the seafood market. It maximizes the use of this material by using the air within its internal cavity for thermal insulation of the catch. The project's sustainability is achieved through careful consideration of its dimensions, the ease of component disassembly, and the ability to reuse the product multiple times. O'Bucket, through its vacuum service, completely eliminates the waste generated by single-use crates. The project is crafted with environmental sustainability in mind and will be submitted to the James Dayson Award 2024 to comply with the 2019/904 European Regulation on reducing the impact of certain plastic products on the environment.
+        O’Bucket is a product-service tackling pollution caused by Expanded Polystyrene (EPS) in the seafood market. 
+        It reuses the material’s air cavities for thermal insulation, while its modular design makes it easy to disassemble and reuse.
+        Thanks to its vacuum return service, O’Bucket eliminates single-use waste. 
+        Designed for sustainability, it will be submitted for the 2024 James Dyson Award in line with EU Directive 2019/904.
         <div class="button-row">`;
 
-    const testoSet9 = `<p>"A Kind of Humanity" is a sensitive and interactive environment that invites quiet, reflection, and introspection. At the center of the installation is a hearth, a symbol of primordial energy and collective bond, with which spectators interact through their voices.
-        Thanks to an Artificial Intelligence system (Hume AI), the environment analyzes the emotions vocally expressed by participants and responds by modifying its form. The experience thus becomes a sensitive dialogue between humans and space, a contemporary ritual in which technology becomes a means to explore the deepest dimension of emotion.
-        The installation draws inspiration from the concept of an intimate space and the symbolic value of the hearth, elements that evoke an ancestral time when communication and emotions were at the center of human connection.
+    const testoSet9 = `<p>
+        "A Kind of Humanity is an interactive installation that invites silence, reflection, and introspection. 
+        At its center burns a fire, a symbol of energy and collective connection, that reacts to visitors’ voices.
+        Using Hume AI, the system analyzes vocal emotions and reshapes its form in response, creating a dialogue between humans and space.
+        Inspired by the intimacy of the hearth, the piece reimagines communication as an emotional, ancestral experience.
         <br /></p>
         <div class="button-row">`;
 
     const testoSet10 = `<p>
-        <br />The project is based on a journey divided into two steps that guide the user for a short stretch of road before entering this "new and magical world" represented by the 
+        The project is a two-step journey leading visitors into the 
         <a href="https://www.museoiluoghidellanima.it/orto-dei-frutti-dimenticati" target="_blank" class="inline-link">Orto dei Frutti Dimenticati</a> 
-        in Pennabilli (RN). Each step communicates to the user a different way of perceiving the values of the past through sensory experiences that evoke the poetics of Tonino Guerra. Through specific research and analysis, an idea of a pre-visit path has been developed, a path that can be taken before entering the Orto and the museum. The project's goal was to allow the visitor to fully immerse themselves in the museum's poetics.
+        in Pennabilli (RN). Each stage offers sensory experiences that evoke Tonino Guerra’s poetic vision of the past.
+        Through research and design, a pre-visit path was created to help visitors fully immerse themselves in the museum’s atmosphere.
         <div class="button-row">`;
 
-    const testoSet11 = `<p>Arcaico is a short film that narrates the soul of the Vatican Chapel designed by Eduardo Souto De Moura for the Distributed 
-    <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Pavilion of the Holy See</a>
-    at the 16th Venice Architecture Biennale. The project and the poetics of Eduardo Souto De Moura convey a look at the material and an aesthetic leads to an archetypal investigation, to a gaze between sacredness and antiquity that carries with it an imaginary past. The concepts of duality, geometry, and time therefore allow us to follow a new look to the Portuguese architect's project, collapsing into the macrotheme of the archaic.
-    <div class="button-row">
+    const testoSet11 = `<p>
+        Arcaico is a short film exploring the soul of Eduardo Souto De Moura’s Vatican Chapel for the Distributed 
+        <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Pavilion of the Holy See</a>
+        at the 16th Venice Architecture Biennale. 
+        The film reflects on materiality, geometry, and time, recurring themes in De Moura’s work, to reveal an aesthetic suspended between the sacred and the ancient.
+        <div class="button-row">
         <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VIEW PROJECT</button>`; 
         
     const testoSet12 = `<p>
-        The project saw the design and display of three large posters on the external facades of the three libraries: Alberto Geisser, Natalia Ginzburg and Dietrich Bonhoeffer in Turin (TO).
+        The project involved designing and displaying three large posters on the main facade of Turin’s Alberto Geisser, Natalia Ginzburg, and Dietrich Bonhoeffer libraries.
         The exhibition     
         <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
-        is carried out under the artistic direction of 
+        was realized under the art direction of 
         <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
         <br /></p>
         <div class="button-row">`; 
 
-    const testoSet13 = `<p>Chasing Orlando is a theatrical comedy based on Ludovico Ariosto's Orlando Furioso, presented in June 2024 at the theater La Fenice in Senigallia. The project focused on the creation of digital scenography, live interactive 3D digital backgrounds in the browser for theatre performance. It’s part of the digital project for the performing arts course.
-        The Digital Experience Lab, directed by Daniele Tabellini, conceived, designed, and developed software for the creation of live visuals to accompany the text and acting. Divided into groups, each team worked independently but complementarily, using approaches and techniques for concept design, expressive programming, and creative coding. The group I worked with focused on the scenography of three scenes for which we created a cloth that takes on different shapes and meanings throughout the show, using three.js and cannon.js.
-        The software, controlled by students during the performance, was released under an open license on GitHub, allowing for both reuse and further research.
+    const testoSet13 = `<p>
+        Chasing Orlando is a theatrical comedy inspired by Ludovico Ariosto’s Orlando Furioso, staged at La Fenice Theatre in Senigallia (June 2024).
+        The project focused on creating live interactive 3D scenography in the browser using three.js and cannon.js.
+        Developed in the Digital Experience Lab led by Daniele Tabellini, each group designed visuals to accompany text and performance.
+        My team built dynamic landsaoe such as the forest of spears that shifted throughout the show.
+        The software, operated live by students, was released open source on GitHub.
         <div class="button-row">
             <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTATION</button>
             <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">MORE INFO</button>`;
 
     const testoSet14 = `<p>
-        <br />Vivida is the concept of a startup that designs data visualization systems. It aims to merge the power of data and the aesthetics of visualization into a platform that enhances exploration through interaction and real-time updates. Vivida seeks to unlock the coldness of data, aiming to transform them into experiences accessible to everyone, thereby broadening their impact and understanding within cultural contexts such as museums and associations. 
-        ENSI is a use case of the Vivida startup. It’s a platform that processes NASA's database on meteorites that have fallen from the 9th century to the present and displays them through an interactive interface where the impact points on the globe are discovered. Various filters (location, mass, time span, day/night mode) facilitate the search and navigation. 
+        Vivida is a startup concept that designs data visualization systems, merging data power with visual aesthetics to create interactive, real-time experiences. Its goal is to make data more human — accessible, emotional, and culturally relevant.
+        ENSI, one of Vivida’s prototypes, visualizes NASA’s meteorite data from the 9th century to today through an interactive globe with filters for location, mass, time, and mode, turning data into an immersive experience.
         </p>
         <div class="button-row">
             <a href="https://vimeo.com/1125186622?share=copy" target="_blank" class="inline-button">VIEW PROJECT</button>`;
