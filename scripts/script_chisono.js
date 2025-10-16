@@ -1374,7 +1374,7 @@ function cambiaContenuto(set) {
         Cluter is an interactive installation that evokes the imagery of the cosmos and galaxies. 
         The project features countless luminous particles reacting to user movements. 
         By moving your hands, you can control gravity and shape the forces of the surrounding space.
-        Developed during a workshop with Laura Arcangeli from Studio 
+        The project was developed during a TouchDesigner workshop with Laura Arcangeli from Studio 
         <a href="https://ultraviolet.to/" target="_blank" class="inline-link">Ultravioletto</a>.
         <div class="button-row">`;
 
@@ -1383,7 +1383,7 @@ function cambiaContenuto(set) {
         <a href="https://www.ulissegallery.com/index.html" target="_blank" class="inline-link">Ulisse Gallery Contemporary Art</a>
          in Rome, a 350 m² exhibition space near Piazza di Spagna. 
          The gallery has worked with major international artists, including Maestro Ugo Attardi, whose Historical Archive it holds. 
-        The project was selected among the 100 innovative works at NEOLOGIA, Graphic Days 2023 in Turin.
+        The project was selected during the festival among the 100 innovative works at NEOLOGIA, Graphic Days 2023 in Turin.
         <br /><br /><a href="https://www.graphicdays.it/neologia/new-media-art-come-il-computer-ha-rivoluzionato-il-mondo-sirio-procacci/()" target="_blank" class="inline-button">VIEW PROJECT</button>
         <div class="button-row"> `;
 
@@ -1403,9 +1403,8 @@ function cambiaContenuto(set) {
     const testoSet4 = `<p>
         This project takes inspiration from the classic “10 PRINT” code to explore randomness, creativity, and digital complexity. 
         By turning videos into visual patterns, it investigates new forms of representation that make content harder to identify or censor.
-        <br />The app only supports .mp4 video so please don't be an a**hole!
-        <br />If you've been a good boy, now you can play with colors and patterns!
-        <br />Who's my good boy?
+        The app only supports .mp4 video so please don't be an a**hole!
+        <br />If you've been a good boy, now you can play with colors and patterns! Who's my good boy?
         <br />
         <div class="button-row">
             <button onclick="redirectToPrintPage()" class="inline-button">VIEW PROJECT</button>
@@ -1426,7 +1425,6 @@ function cambiaContenuto(set) {
         Pesaro makes a sound and it’s urban. 
         Its rhythm shifts with space and time, from the industrial outskirts to the coast where architecture meets the Adriatic.
         Nature weaves through the city’s forms, blending culture and environment into a sound that can be mapped and explored.
-        At its core, everything follows mathematics.
         “0721” is an exhibition project developed with the 
         <a href="https://www.comune.pesaro.pu.it/turismo/dettaglio/news/storie-e-geografie/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=fd8ba27f281f902ae5092e4a562d5607" target="_blank" class="inline-link">Municipality of Pesaro</a> 
         and 
@@ -1438,6 +1436,7 @@ function cambiaContenuto(set) {
     const testoSet7 = `<p>
         “Can AI Unlock Your Creativity?” was a workshop on Artificial Intelligence led by 
         <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>'s 
+        Art Director and Creative Technologist.
         By the end, I had grasped AI fundamentals, learned tools like Midjourney, and created a short film combining several AI systems. 
         The video was produced in a vertical format for mobile viewing as a reel for the launch of three new products designed by The North Face.
         <br />
@@ -1467,7 +1466,7 @@ function cambiaContenuto(set) {
         <div class="button-row">`;
 
     const testoSet11 = `<p>
-        Arcaico is a short film exploring the soul of Eduardo Souto De Moura’s Vatican Chapel for the Distributed 
+       This short film explores the soul of Eduardo Souto De Moura’s Vatican Chapel for the Distributed 
         <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Pavilion of the Holy See</a>
         at the 16th Venice Architecture Biennale. 
         The film reflects on materiality, geometry, and time, recurring themes in De Moura’s work, to reveal an aesthetic suspended between the sacred and the ancient.
@@ -1488,7 +1487,7 @@ function cambiaContenuto(set) {
         The project focused on creating live interactive 3D scenography in the browser using three.js and cannon.js.
         Developed in the Digital Experience Lab led by Daniele Tabellini, each group designed visuals to accompany text and performance.
         My team built dynamic landsaoe such as the forest of spears that shifted throughout the show.
-        The software, operated live by students, was released open source on GitHub.
+        The software was released open source on GitHub.
         <div class="button-row">
             <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTATION</button>
             <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">MORE INFO</button>`;
