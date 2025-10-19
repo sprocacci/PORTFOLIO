@@ -15,6 +15,443 @@ function redirectTo10PPGitPage() {
     window.location.href = "https://github.com/sprocacci/archive-2024/tree/main/sprocacci/10_PRINT_VARIATION";
 }
 
+function redirectTo10PPGitPage() {
+    window.location.href = "https://github.com/sprocacci/archive-2024/tree/main/sprocacci/10_PRINT_VARIATION";
+}
+
+// ================= SISTEMA BILINGUE =================
+let currentLanguage = 'en'; // Lingua predefinita
+
+const translations = {
+    en: {
+        mainTitle: 'Who I am',
+        mainText: `<p>
+        Hello!
+        <br />I'm Sirio Procacci and I'm a designer fresh out of University. 
+        I did my Bachelor's in Industrial and Environmental Design at the SAAD, three years of sketching, prototyping, and surviving deadlines.
+        Then I jumped into a Master's in Interaction and Experience Design at the UNIRSM, where I fell down the rabbit hole of UX, interfaces, and way too many post-its (sigh).
+        I'm a designer who's into beautiful things, good photos, and fast bikes.
+        This site is my little corner of the internet. Go to full screen, take a look around and click stuff. XOXO.
+        <div class="button-row">
+          <a href="mailto:sirio.procacci@outlook.com" class="button-row:">HIT ME UP!</a>
+        </div>`,
+        
+        projects: {
+            set1: {
+                title: 'Cluster',
+                text: `<p>
+                Cluter is an interactive installation that evokes the imagery of the cosmos and galaxies. 
+                The project features countless luminous particles reacting to user movements. 
+                By moving your hands, you can control gravity and shape the forces of the surrounding space.
+                The project was developed during a TouchDesigner workshop with Laura Arcangeli from Studio 
+                <a href="https://ultraviolet.to/" target="_blank" class="inline-link">Ultravioletto</a>.
+                <div class="button-row">`,
+                keywords: ['2024','Interaction','Experience Design','Motion Capture']
+            },
+            set2: {
+                title: 'New Media Art',
+                text: `<p>
+                The thesis was further developed in collaboration with
+                <a href="https://www.ulissegallery.com/index.html" target="_blank" class="inline-link">Ulisse Gallery Contemporary Art</a>
+                 in Rome, a 350 m² exhibition space near Piazza di Spagna. 
+                 The gallery has worked with major international artists, including Maestro Ugo Attardi, whose Historical Archive it holds. 
+                The project was selected during the festival among the 100 innovative works at NEOLOGIA, Graphic Days 2023 in Turin.
+                <br /><br /><a href="https://www.graphicdays.it/neologia/new-media-art-come-il-computer-ha-rivoluzionato-il-mondo-sirio-procacci/()" target="_blank" class="inline-button">VIEW PROJECT</button>
+                <div class="button-row"> `,
+                keywords: ['2022','Bachelor Project', 'Editorial','Archive Research']
+            },
+            set3: {
+                title: '[8583 Hysterische Postkarten]',
+                text: `<p> 
+                [8583 Hysterische Postkarten] is a project based on the Austrian archive 
+                <a href="https://labs.onb.ac.at/en/datasets/akon/" target="_blank" class="inline-link">Historical Postcards</a>.
+                It draws inspiration from Bruno Munari's "Saluti e Baci" series.
+                Here you can create unique and surreal collages.
+                <br /><br />- Enter a value from 1 to 100;
+                <br />- Use the "GENERATE" button or the "ENTER" key;
+                <br />- Use the mouse to view the information;
+                <br />- Click on the portion you want to view.
+                <br />
+                <div class="button-row">
+                <button onclick="redirectToHysterischePage()" class="inline-button">VIEW PROJECT</button>`,
+                keywords: ['2024','Interaction','Data Visualization','Creative Coding']
+            },
+            set4: {
+                title: '\\m/ 10 PUNK PRINT \\m/',
+                text: `<p>
+                This project takes inspiration from the classic "10 PRINT" code to explore randomness, creativity, and digital complexity. 
+                By turning videos into visual patterns, it investigates new forms of representation that make content harder to identify or censor.
+                The app only supports .mp4 video so please don't be an a**hole!
+                <br />If you've been a good boy, now you can play with colors and patterns! Who's my good boy?
+                <br />
+                <div class="button-row">
+                    <button onclick="redirectToPrintPage()" class="inline-button">VIEW PROJECT</button>
+                    <button onclick="redirectTo10PPGitPage()" class="inline-button">MORE INFO</button>`,
+                keywords: ['2024','Interaction','Creative Coding','Digital Research']
+            },
+            set5: {
+                title: 'Circolo Del Design',
+                text: `<p>
+                An interactive application designed to develop 
+                <a href="https://www.circolodeldesign.it/" target="_blank" class="inline-link">Circolo del Design</a>'s
+                video identity. It lets users interact in real time with a 3D model of the CDD logo.
+                Developed under the art direction of
+                <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
+                </p>
+                <div class="button-row">
+                    <button onclick="redirectToCDDPage()" class="inline-button">VIEW PROJECT</button>
+                    <button onclick="redirectToCDDVideo()" class="inline-button">VIEW VIDEO</button>`,
+                keywords: ['2024','Visual Identity','Creative Coding','Video Editing']
+            },
+            set6: {
+                title: '0721 Pesaro Zona Acustica',
+                text: `<p>
+                Pesaro makes a sound and it's urban. 
+                Its rhythm shifts with space and time, from the industrial outskirts to the coast where architecture meets the Adriatic.
+                Nature weaves through the city's forms, blending culture and environment into a sound that can be mapped and explored.
+                "0721" is an exhibition project developed with the 
+                <a href="https://www.comune.pesaro.pu.it/turismo/dettaglio/news/storie-e-geografie/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=fd8ba27f281f902ae5092e4a562d5607" target="_blank" class="inline-link">Municipality of Pesaro</a> 
+                and 
+                <a href="https://pesaromusei.it/guide/nbart-opere-di-gio-ross-2-3-2-2-2-2/" target="_blank" class="inline-link">Pesaro Musei</a>
+                for "Pesaro Italian Capital of Culture 2024" featuring both urban and indoor installations at 
+                <a href="https://pesaromusei.it/pescheria-centro-arti-visive/" target="_blank" class="inline-link">Pescheria Centro Arti Visive</a>.
+                <div class="button-row">`,
+                keywords: ['2023','Exhibition','Sound Design','Arduino']
+            },
+            set7: {
+                title: 'The North Face',
+                text: `<p>
+                "Can AI Unlock Your Creativity?" was a workshop on Artificial Intelligence led by 
+                <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>'s 
+                Art Director and Creative Technologist.
+                By the end, I had grasped AI fundamentals, learned tools like Midjourney, and created a short film combining several AI systems. 
+                The video was produced in a vertical format for mobile viewing as a reel for the launch of three new products designed by The North Face.
+                <br />
+                <div class="button-row">
+                    <a href="https://vimeo.com/1125189923?share=copy" target="_blank" class="inline-link">VIEW PROJECT</a>`,
+                keywords: ['2023','AI','Video Editing','Tehcnologic Research']
+            },
+            set8: {
+                title: 'O`Family',
+                text: `<p>
+                O'Bucket is a product-service tackling pollution caused by Expanded Polystyrene (EPS) in the seafood market. 
+                It reuses the material's air cavities for thermal insulation, while its modular design makes it easy to disassemble and reuse.
+                Thanks to its vacuum return service, O'Bucket eliminates single-use waste. 
+                Designed for sustainability, it will be submitted for the 2024 James Dyson Award in line with EU Directive 2019/904.
+                <div class="button-row">`,
+                keywords: ['2022','Product','Sustainable Design','3D Modelling']
+            },
+            set9: {
+                title: 'A KIND OF HUMANITY',
+                text: `<p>
+                "A Kind of Humanity is an interactive installation that invites silence, reflection, and introspection. 
+                At its center burns a fire, a symbol of energy and collective connection, that reacts to visitors' voices.
+                Using Hume AI, the system analyzes vocal emotions and reshapes its form in response, creating a dialogue between humans and space.
+                Inspired by the intimacy of the hearth, the piece reimagines communication as an emotional, ancestral experience.
+                <br /></p>
+                <div class="button-row">`,
+                keywords: ['2025','Exhibition','AI','Visual Design']
+            },
+            set10: {
+                title: 'A-Tempo',
+                text: `<p>
+                The project is a two-step journey leading visitors into the 
+                <a href="https://www.museoiluoghidellanima.it/orto-dei-frutti-dimenticati" target="_blank" class="inline-link">Orto dei Frutti Dimenticati</a> 
+                in Pennabilli (RN). Each stage offers sensory experiences that evoke Tonino Guerra's poetic vision of the past.
+                Through research and design, a pre-visit path was created to help visitors fully immerse themselves in the museum's atmosphere.
+                <div class="button-row">`,
+                keywords: ['2023','Interaction','3D Modelling','Arduino']
+            },
+            set11: {
+                title: 'ARCAICO',
+                text: `<p>
+               This short film explores the soul of Eduardo Souto De Moura's Vatican Chapel for the Distributed 
+                <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Pavilion of the Holy See</a>
+                at the 16th Venice Architecture Biennale. 
+                The film reflects on materiality, geometry, and time, recurring themes in De Moura's work, to reveal an aesthetic suspended between the sacred and the ancient.
+                <div class="button-row">
+                <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VIEW PROJECT</button>`,
+                keywords: ['2024','Art Direction','Video Editing','Sound Design']
+            },
+            set12: {
+                title: 'Museo in Libera Uscita',
+                text: `<p>
+                The project involved designing and displaying three large posters on the main facade of Turin's Alberto Geisser, Natalia Ginzburg, and Dietrich Bonhoeffer libraries.
+                The exhibition     
+                <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
+                was realized under the art direction of 
+                <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
+                <br /></p>
+                <div class="button-row">`,
+                keywords: ['2025','Manifesto','Art Direction','Graphic Design']
+            },
+            set13: {
+                title: 'Inseguendo Orlando',
+                text: `<p>
+                Chasing Orlando is a theatrical comedy inspired by Ludovico Ariosto's Orlando Furioso, staged at La Fenice Theatre in Senigallia (June 2024).
+                The project focused on creating live interactive 3D scenography in the browser using three.js and cannon.js.
+                Developed in the Digital Experience Lab led by Daniele Tabellini, each group designed visuals to accompany text and performance.
+                My team built dynamic landsaoe such as the forest of spears that shifted throughout the show.
+                The software was released open source on GitHub.
+                <div class="button-row">
+                    <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTATION</button>
+                    <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">MORE INFO</button>`,
+                keywords: ['2024','Digital Scenography','Interactive Visual','Creative Coding']
+            },
+            set14: {
+                title: 'VIVIDA',
+                text: `<p>
+                Vivida is a startup concept that designs data visualization systems, merging data power with visual aesthetics to create interactive, real-time experiences. Its goal is to make data more human — accessible, emotional, and culturally relevant.
+                ENSI, one of Vivida's prototypes, visualizes NASA's meteorite data from the 9th century to today through an interactive globe with filters for location, mass, time, and mode, turning data into an immersive experience.
+                </p>
+                <div class="button-row">
+                    <a href="https://vimeo.com/1125186622?share=copy" target="_blank" class="inline-button">VIEW PROJECT</button>`,
+                keywords: ['2024','Interaction','Data Visualization','Web Application']
+            }
+        }
+    },
+    it: {
+        mainTitle: 'Chi sono',
+        mainText: `<p>
+        Ciao!
+        <br />Sono Sirio Procacci e sono un designer appena uscito dall'Università.
+        Ho fatto la triennale in Design Industriale e Ambientale alla SAAD, tre anni tra schizzi, prototipi e deadline infinite.
+        Poi mi sono buttato in una Magistrale in Interaction ed Experience Design all'UNIRSM, dove sono finito nella tana del bianconiglio tra UX, interfacce e troppi post-it (sigh).
+        Sono un designer appassionato di cose belle, belle foto e moto veloci.
+        Questo sito è il mio piccolo angolo di internet. Vai a schermo intero, guardati intorno e clicca su tutto. XOXO.
+        <div class="button-row">
+          <a href="mailto:sirio.procacci@outlook.com" class="button-row:">SCRIVIMI!</a>
+        </div>`,
+        
+        projects: {
+            set1: {
+                title: 'Cluster',
+                text: `<p>
+                Cluster è un'installazione interattiva che evoca l'immaginario del cosmo e delle galassie.
+                Il progetto presenta innumerevoli particelle luminose che reagiscono ai movimenti dell'utente.
+                Muovendo le mani, puoi controllare la gravità e modellare le forze dello spazio circostante.
+                Il progetto è stato sviluppato durante un workshop di TouchDesigner con Laura Arcangeli dello Studio
+                <a href="https://ultraviolet.to/" target="_blank" class="inline-link">Ultravioletto</a>.
+                <div class="button-row">`,
+                keywords: ['2024','Interazione','Experience Design','Motion Capture']
+            },
+            set2: {
+                title: 'New Media Art',
+                text: `<p>
+                La tesi è stata ulteriormente sviluppata in collaborazione con
+                <a href="https://www.ulissegallery.com/index.html" target="_blank" class="inline-link">Ulisse Gallery Contemporary Art</a>
+                 a Roma, uno spazio espositivo di 350 m² vicino a Piazza di Spagna.
+                 La galleria ha collaborato con importanti artisti internazionali, tra cui il Maestro Ugo Attardi, del quale custodisce l'Archivio Storico.
+                Il progetto è stato selezionato durante il festival tra le 100 opere innovative a NEOLOGIA, Graphic Days 2023 a Torino.
+                <br /><br /><a href="https://www.graphicdays.it/neologia/new-media-art-come-il-computer-ha-rivoluzionato-il-mondo-sirio-procacci/()" target="_blank" class="inline-button">VEDI PROGETTO</button>
+                <div class="button-row"> `,
+                keywords: ['2022','Tesi Triennale', 'Editoriale','Ricerca Archivistica']
+            },
+            set3: {
+                title: '[8583 Hysterische Postkarten]',
+                text: `<p> 
+                [8583 Hysterische Postkarten] è un progetto basato sull'archivio austriaco
+                <a href="https://labs.onb.ac.at/en/datasets/akon/" target="_blank" class="inline-link">Historical Postcards</a>.
+                Trae ispirazione dalla serie "Saluti e Baci" di Bruno Munari.
+                Qui puoi creare collage unici e surreali.
+                <br /><br />- Inserisci un valore da 1 a 100;
+                <br />- Usa il pulsante "GENERA" o il tasto "INVIO";
+                <br />- Usa il mouse per visualizzare le informazioni;
+                <br />- Clicca sulla porzione che vuoi visualizzare.
+                <br />
+                <div class="button-row">
+                <button onclick="redirectToHysterischePage()" class="inline-button">VEDI PROGETTO</button>`,
+                keywords: ['2024','Interazione','Visualizzazione Dati','Creative Coding']
+            },
+            set4: {
+                title: '\\m/ 10 PUNK PRINT \\m/',
+                text: `<p>
+                Questo progetto trae ispirazione dal classico codice "10 PRINT" per esplorare casualità, creatività e complessità digitale.
+                Trasformando video in pattern visivi, indaga nuove forme di rappresentazione che rendono i contenuti più difficili da identificare o censurare.
+                L'app supporta solo video .mp4, quindi per favore non fare lo str**zo!
+                <br />Se sei stato bravo, ora puoi giocare con colori e pattern! Chi è il mio bravo ragazzo?
+                <br />
+                <div class="button-row">
+                    <button onclick="redirectToPrintPage()" class="inline-button">VEDI PROGETTO</button>
+                    <button onclick="redirectTo10PPGitPage()" class="inline-button">PIÙ INFO</button>`,
+                keywords: ['2024','Interazione','Creative Coding','Ricerca Digitale']
+            },
+            set5: {
+                title: 'Circolo Del Design',
+                text: `<p>
+                Un'applicazione interattiva progettata per sviluppare l'identità video del
+                <a href="https://www.circolodeldesign.it/" target="_blank" class="inline-link">Circolo del Design</a>.
+                Permette agli utenti di interagire in tempo reale con un modello 3D del logo CDD.
+                Sviluppato sotto la direzione artistica di
+                <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
+                </p>
+                <div class="button-row">
+                    <button onclick="redirectToCDDPage()" class="inline-button">VEDI PROGETTO</button>
+                    <button onclick="redirectToCDDVideo()" class="inline-button">VEDI VIDEO</button>`,
+                keywords: ['2024','Identità Visiva','Creative Coding','Video Editing']
+            },
+            set6: {
+                title: '0721 Pesaro Zona Acustica',
+                text: `<p>
+                Pesaro fa un suono ed è urbano.
+                Il suo ritmo cambia con lo spazio e il tempo, dalla periferia industriale alla costa dove l'architettura incontra l'Adriatico.
+                La natura si intreccia alle forme della città, fondendo cultura e ambiente in un suono che può essere mappato ed esplorato.
+                "0721" è un progetto espositivo sviluppato con il
+                <a href="https://www.comune.pesaro.pu.it/turismo/dettaglio/news/storie-e-geografie/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=fd8ba27f281f902ae5092e4a562d5607" target="_blank" class="inline-link">Comune di Pesaro</a>
+                e
+                <a href="https://pesaromusei.it/guide/nbart-opere-di-gio-ross-2-3-2-2-2-2/" target="_blank" class="inline-link">Pesaro Musei</a>
+                per "Pesaro Capitale Italiana della Cultura 2024" con installazioni urbane e indoor alla
+                <a href="https://pesaromusei.it/pescheria-centro-arti-visive/" target="_blank" class="inline-link">Pescheria Centro Arti Visive</a>.
+                <div class="button-row">`,
+                keywords: ['2023','Mostra','Sound Design','Arduino']
+            },
+            set7: {
+                title: 'The North Face',
+                text: `<p>
+                "Can AI Unlock Your Creativity?" è stato un workshop sull'Intelligenza Artificiale condotto dall'Art Director e Creative Technologist di
+                <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>.
+                Alla fine, avevo compreso i fondamenti dell'AI, imparato strumenti come Midjourney e creato un cortometraggio combinando diversi sistemi di AI.
+                Il video è stato prodotto in formato verticale per la visione mobile come reel per il lancio di tre nuovi prodotti di The North Face.
+                <br />
+                <div class="button-row">
+                    <a href="https://vimeo.com/1125189923?share=copy" target="_blank" class="inline-link">VEDI PROGETTO</a>`,
+                keywords: ['2023','AI','Video Editing','Ricerca Tecnologica']
+            },
+            set8: {
+                title: 'O`Family',
+                text: `<p>
+                O'Bucket è un prodotto-servizio che affronta l'inquinamento causato dal Polistirene Espanso (EPS) nel mercato ittico.
+                Riutilizza le cavità d'aria del materiale per l'isolamento termico, mentre il suo design modulare lo rende facile da smontare e riutilizzare.
+                Grazie al servizio di restituzione sottovuoto, O'Bucket elimina i rifiuti usa e getta.
+                Progettato per la sostenibilità, sarà presentato al James Dyson Award 2024 in linea con la Direttiva UE 2019/904.
+                <div class="button-row">`,
+                keywords: ['2022','Prodotto','Design Sostenibile','Modellazione 3D']
+            },
+            set9: {
+                title: 'A KIND OF HUMANITY',
+                text: `<p>
+                "A Kind of Humanity" è un'installazione interattiva che invita al silenzio, alla riflessione e all'introspezione.
+                Al suo centro arde un fuoco, simbolo di energia e connessione collettiva, che reagisce alle voci dei visitatori.
+                Usando Hume AI, il sistema analizza le emozioni vocali e rimodella la sua forma in risposta, creando un dialogo tra umani e spazio.
+                Ispirata all'intimità del focolare, l'opera reinterpreta la comunicazione come un'esperienza emotiva e ancestrale.
+                <br /></p>
+                <div class="button-row">`,
+                keywords: ['2025','Mostra','AI','Visual Design']
+            },
+            set10: {
+                title: 'A-Tempo',
+                text: `<p>
+                Il progetto è un viaggio in due tappe che conduce i visitatori nell'
+                <a href="https://www.museoiluoghidellanima.it/orto-dei-frutti-dimenticati" target="_blank" class="inline-link">Orto dei Frutti Dimenticati</a>
+                a Pennabilli (RN). Ogni tappa offre esperienze sensoriali che evocano la visione poetica del passato di Tonino Guerra.
+                Attraverso ricerca e progettazione, è stato creato un percorso pre-visita per aiutare i visitatori a immergersi completamente nell'atmosfera del museo.
+                <div class="button-row">`,
+                keywords: ['2023','Interazione','Modellazione 3D','Arduino']
+            },
+            set11: {
+                title: 'ARCAICO',
+                text: `<p>
+               Questo cortometraggio esplora l'anima della Cappella Vaticana di Eduardo Souto De Moura per il
+                <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Padiglione Distribuito della Santa Sede</a>
+                alla 16ª Biennale di Architettura di Venezia.
+                Il film riflette su materialità, geometria e tempo, temi ricorrenti nell'opera di De Moura, per rivelare un'estetica sospesa tra il sacro e l'antico.
+                <div class="button-row">
+                <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VEDI PROGETTO</button>`,
+                keywords: ['2024','Direzione Artistica','Video Editing','Sound Design']
+            },
+            set12: {
+                title: 'Museo in Libera Uscita',
+                text: `<p>
+                Il progetto ha previsto la progettazione e l'esposizione di tre grandi manifesti sulla facciata principale delle biblioteche Alberto Geisser, Natalia Ginzburg e Dietrich Bonhoeffer di Torino.
+                La mostra
+                <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
+                è stata realizzata sotto la direzione artistica di
+                <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
+                <br /></p>
+                <div class="button-row">`,
+                keywords: ['2025','Manifesto','Direzione Artistica','Graphic Design']
+            },
+            set13: {
+                title: 'Inseguendo Orlando',
+                text: `<p>
+                Inseguendo Orlando è una commedia teatrale ispirata all'Orlando Furioso di Ludovico Ariosto, messa in scena al Teatro La Fenice di Senigallia (giugno 2024).
+                Il progetto si è concentrato sulla creazione di scenografie 3D interattive dal vivo nel browser usando three.js e cannon.js.
+                Sviluppato nel Digital Experience Lab guidato da Daniele Tabellini, ogni gruppo ha progettato visual per accompagnare testo e performance.
+                Il mio team ha costruito paesaggi dinamici come la foresta di lance che si trasformava durante lo spettacolo.
+                Il software è stato rilasciato open source su GitHub.
+                <div class="button-row">
+                    <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTAZIONE</button>
+                    <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">PIÙ INFO</button>`,
+                keywords: ['2024','Scenografia Digitale','Visual Interattivi','Creative Coding']
+            },
+            set14: {
+                title: 'VIVIDA',
+                text: `<p>
+                Vivida è un concept di startup che progetta sistemi di visualizzazione dati, unendo la potenza dei dati con l'estetica visiva per creare esperienze
+                interattive in tempo reale. Il suo obiettivo è rendere i dati più umani — accessibili, emotivi e culturalmente rilevanti.
+                ENSI, uno dei prototipi di Vivida, visualizza i dati dei meteoriti della NASA dal IX secolo a oggi attraverso un globo interattivo con filtri per posizione, massa, tempo e modalità, trasformando i dati in un'esperienza immersiva.
+                </p>
+                <div class="button-row">
+                    <a href="https://vimeo.com/1125186622?share=copy" target="_blank" class="inline-button">VEDI PROGETTO</button>`,
+                keywords: ['2024','Interazione','Visualizzazione Dati','Applicazione Web']
+            }
+        }
+    }
+};
+
+// Funzione per cambiare lingua
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    
+    // Aggiorna i bottoni lingua
+    document.querySelectorAll('.lang-button').forEach(btn => {
+        if (btn.dataset.lang === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    // Aggiorna il contenuto principale se nessun progetto è selezionato
+    const anyProjectSelected = document.querySelector('.back-button.selected');
+    if (!anyProjectSelected) {
+        const titolo = document.getElementById('titolo-h1');
+        const testoContenuto = document.getElementById('testo-contenuto');
+        
+        if (titolo) titolo.textContent = translations[lang].mainTitle;
+        if (testoContenuto) testoContenuto.innerHTML = translations[lang].mainText;
+        aggiornaKeywords([]);
+    } else {
+        // Se c'è un progetto selezionato, aggiorna quello
+        updateCurrentProjectLanguage();
+    }
+}
+
+// Funzione per aggiornare la lingua del progetto corrente
+function updateCurrentProjectLanguage() {
+    const selectedButton = document.querySelector('.back-button.selected');
+    if (!selectedButton) return;
+    
+    // Identifica quale set è selezionato
+    const onclick = selectedButton.getAttribute('onclick');
+    const setMatch = onclick.match(/cambiaContenuto\('(set\d+)'\)/);
+    
+    if (setMatch) {
+        const setId = setMatch[1];
+        const project = translations[currentLanguage].projects[setId];
+        
+        if (project) {
+            const titolo = document.getElementById('titolo-h1');
+            const testoContenuto = document.getElementById('testo-contenuto');
+            
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
+            aggiornaKeywords(project.keywords);
+        }
+    }
+}
+
+
 // Funzione per aggiornare le keywords
 function aggiornaKeywords(keywords) {
     const keywordsContainer = document.getElementById('keywords-container');
@@ -391,10 +828,12 @@ function resetAllContainers() {
     const bottone12 = document.querySelector("button[onclick*='set12']");
     const bottone13 = document.querySelector("button[onclick*='set13']");
     const bottone14 = document.querySelector("button[onclick*='set14']");
-    
+
+    const languageToggle = document.getElementById('language-toggle');
+    if (languageToggle) languageToggle.classList.remove('hidden');
     const defaultImg = 'immagini/base/wp5404034-59414419.png';
-    const defaultTitolo = 'Who I am';
-    const defaultTesto = testoContenuto ? testoContenuto.dataset.default : '';
+    const defaultTitolo = translations[currentLanguage].mainTitle;
+    const defaultTesto = translations[currentLanguage].mainText;
 
     fermaRotazioneImmaginiSet3(); // stop immagini random set3
     aggiornaKeywords([]); // Array vuoto = nascondi
@@ -872,8 +1311,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const defaultImg = 'immagini/base/wp5404034-59414419.png';
     const hoverDefault = 'immagini/base/0031_31A.jpg';
 
-    if (testoContenuto) testoContenuto.innerHTML = testoContenuto.dataset.default;
-    if (titolo) titolo.textContent = 'Who I am';
+    if (testoContenuto) testoContenuto.innerHTML = translations[currentLanguage].mainText;
+    if (titolo) titolo.textContent = translations[currentLanguage].mainTitle;
 
     // ================= KEYBOARD NAVIGATION SETUP =================
     document.addEventListener('keydown', handleKeyboardNavigation);
@@ -1325,6 +1764,17 @@ if (imgMain) {
         hideHoverImage();
     });
 }
+
+// ================= EVENT LISTENERS LINGUA =================
+    const langButtons = document.querySelectorAll('.lang-button');
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.dataset.lang;
+            changeLanguage(lang);
+        });
+    });
+
 });
 
 // ================== CAMBIA CONTENUTO ==================
@@ -1336,7 +1786,6 @@ function cambiaContenuto(set) {
     const containerSet3 = document.querySelector('.container-set3');
     const containerSet4 = document.querySelector('.container-set4');
     const containerSet5 = document.querySelector('.container-set5');
-    // CONTAINER NASCOSTI
     const containerSet6 = document.querySelector('.container-set6');
     const containerSet7 = document.querySelector('.container-set7');
     const containerSet8 = document.querySelector('.container-set8');
@@ -1354,7 +1803,6 @@ function cambiaContenuto(set) {
     const bottoneC = document.querySelector("button[onclick*='set3']");
     const bottoneD = document.querySelector("button[onclick*='set4']");
     const bottoneE = document.querySelector("button[onclick*='set5']");
-    // BOTTONO NASCOSTI
     const bottone6 = document.querySelector("button[onclick*='set6']");
     const bottone7 = document.querySelector("button[onclick*='set7']");
     const bottone8 = document.querySelector("button[onclick*='set8']");
@@ -1366,155 +1814,28 @@ function cambiaContenuto(set) {
     const bottone14 = document.querySelector("button[onclick*='set14']");
 
     const defaultImg = 'immagini/base/wp5404034-59414419.png';
-    const defaultTitolo = 'Chi sono';
-    const defaultTesto = testoContenuto ? testoContenuto.dataset.default : '';
+    // NUOVO: Nascondi lo switch lingua quando si apre un progetto
+    const languageToggle = document.getElementById('language-toggle');
 
-    // TESTI SET
-    const testoSet1 = `<p>
-        Cluter is an interactive installation that evokes the imagery of the cosmos and galaxies. 
-        The project features countless luminous particles reacting to user movements. 
-        By moving your hands, you can control gravity and shape the forces of the surrounding space.
-        The project was developed during a TouchDesigner workshop with Laura Arcangeli from Studio 
-        <a href="https://ultraviolet.to/" target="_blank" class="inline-link">Ultravioletto</a>.
-        <div class="button-row">`;
+    // Ottieni le traduzioni per la lingua corrente
+    const project = translations[currentLanguage].projects[set];
 
-    const testoSet2 = `<p>
-        The thesis was further developed in collaboration with
-        <a href="https://www.ulissegallery.com/index.html" target="_blank" class="inline-link">Ulisse Gallery Contemporary Art</a>
-         in Rome, a 350 m² exhibition space near Piazza di Spagna. 
-         The gallery has worked with major international artists, including Maestro Ugo Attardi, whose Historical Archive it holds. 
-        The project was selected during the festival among the 100 innovative works at NEOLOGIA, Graphic Days 2023 in Turin.
-        <br /><br /><a href="https://www.graphicdays.it/neologia/new-media-art-come-il-computer-ha-rivoluzionato-il-mondo-sirio-procacci/()" target="_blank" class="inline-button">VIEW PROJECT</button>
-        <div class="button-row"> `;
-
-    const testoSet3 = `<p> 
-        [8583 Hysterische Postkarten] is a project based on the Austrian archive 
-        <a href="https://labs.onb.ac.at/en/datasets/akon/" target="_blank" class="inline-link">Historical Postcards</a>.
-        It draws inspiration from Bruno Munari’s "Saluti e Baci" series.
-        Here you can create unique and surreal collages.
-        <br /><br />- Enter a value from 1 to 100;
-        <br />- Use the "GENERATE" button or the "ENTER" key;
-        <br />- Use the mouse to view the information;
-        <br />- Click on the portion you want to view.
-        <br />
-        <div class="button-row">
-        <button onclick="redirectToHysterischePage()" class="inline-button">VIEW PROJECT</button>`;
-
-    const testoSet4 = `<p>
-        This project takes inspiration from the classic “10 PRINT” code to explore randomness, creativity, and digital complexity. 
-        By turning videos into visual patterns, it investigates new forms of representation that make content harder to identify or censor.
-        The app only supports .mp4 video so please don't be an a**hole!
-        <br />If you've been a good boy, now you can play with colors and patterns! Who's my good boy?
-        <br />
-        <div class="button-row">
-            <button onclick="redirectToPrintPage()" class="inline-button">VIEW PROJECT</button>
-            <button onclick="redirectTo10PPGitPage()" class="inline-button">MORE INFO</button>`;
-
-    const testoSet5 = `<p>
-        An interactive application designed to develop 
-        <a href="https://www.circolodeldesign.it/" target="_blank" class="inline-link">Circolo del Design</a>'s
-        video identity. It lets users interact in real time with a 3D model of the CDD logo.
-        Developed under the art direction of
-        <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
-        </p>
-        <div class="button-row">
-            <button onclick="redirectToCDDPage()" class="inline-button">VIEW PROJECT</button>
-            <button onclick="redirectToCDDVideo()" class="inline-button">VIEW VIDEO</button>`;
-
-    const testoSet6 = `<p>
-        Pesaro makes a sound and it’s urban. 
-        Its rhythm shifts with space and time, from the industrial outskirts to the coast where architecture meets the Adriatic.
-        Nature weaves through the city’s forms, blending culture and environment into a sound that can be mapped and explored.
-        “0721” is an exhibition project developed with the 
-        <a href="https://www.comune.pesaro.pu.it/turismo/dettaglio/news/storie-e-geografie/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=fd8ba27f281f902ae5092e4a562d5607" target="_blank" class="inline-link">Municipality of Pesaro</a> 
-        and 
-        <a href="https://pesaromusei.it/guide/nbart-opere-di-gio-ross-2-3-2-2-2-2/" target="_blank" class="inline-link">Pesaro Musei</a>
-        for "Pesaro Italian Capital of Culture 2024" featuring both urban and indoor installations at 
-        <a href="https://pesaromusei.it/pescheria-centro-arti-visive/" target="_blank" class="inline-link">Pescheria Centro Arti Visive</a>.
-        <div class="button-row">`;
-
-    const testoSet7 = `<p>
-        “Can AI Unlock Your Creativity?” was a workshop on Artificial Intelligence led by 
-        <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>'s 
-        Art Director and Creative Technologist.
-        By the end, I had grasped AI fundamentals, learned tools like Midjourney, and created a short film combining several AI systems. 
-        The video was produced in a vertical format for mobile viewing as a reel for the launch of three new products designed by The North Face.
-        <br />
-        <div class="button-row">
-            <a href="https://vimeo.com/1125189923?share=copy" target="_blank" class="inline-link">VIEW PROJECT</a>`;
-
-    const testoSet8 = `<p>
-        O’Bucket is a product-service tackling pollution caused by Expanded Polystyrene (EPS) in the seafood market. 
-        It reuses the material’s air cavities for thermal insulation, while its modular design makes it easy to disassemble and reuse.
-        Thanks to its vacuum return service, O’Bucket eliminates single-use waste. 
-        Designed for sustainability, it will be submitted for the 2024 James Dyson Award in line with EU Directive 2019/904.
-        <div class="button-row">`;
-
-    const testoSet9 = `<p>
-        "A Kind of Humanity is an interactive installation that invites silence, reflection, and introspection. 
-        At its center burns a fire, a symbol of energy and collective connection, that reacts to visitors’ voices.
-        Using Hume AI, the system analyzes vocal emotions and reshapes its form in response, creating a dialogue between humans and space.
-        Inspired by the intimacy of the hearth, the piece reimagines communication as an emotional, ancestral experience.
-        <br /></p>
-        <div class="button-row">`;
-
-    const testoSet10 = `<p>
-        The project is a two-step journey leading visitors into the 
-        <a href="https://www.museoiluoghidellanima.it/orto-dei-frutti-dimenticati" target="_blank" class="inline-link">Orto dei Frutti Dimenticati</a> 
-        in Pennabilli (RN). Each stage offers sensory experiences that evoke Tonino Guerra’s poetic vision of the past.
-        Through research and design, a pre-visit path was created to help visitors fully immerse themselves in the museum’s atmosphere.
-        <div class="button-row">`;
-
-    const testoSet11 = `<p>
-       This short film explores the soul of Eduardo Souto De Moura’s Vatican Chapel for the Distributed 
-        <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Pavilion of the Holy See</a>
-        at the 16th Venice Architecture Biennale. 
-        The film reflects on materiality, geometry, and time, recurring themes in De Moura’s work, to reveal an aesthetic suspended between the sacred and the ancient.
-        <div class="button-row">
-        <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VIEW PROJECT</button>`; 
-        
-    const testoSet12 = `<p>
-        The project involved designing and displaying three large posters on the main facade of Turin’s Alberto Geisser, Natalia Ginzburg, and Dietrich Bonhoeffer libraries.
-        The exhibition     
-        <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
-        was realized under the art direction of 
-        <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
-        <br /></p>
-        <div class="button-row">`; 
-
-    const testoSet13 = `<p>
-        Chasing Orlando is a theatrical comedy inspired by Ludovico Ariosto’s Orlando Furioso, staged at La Fenice Theatre in Senigallia (June 2024).
-        The project focused on creating live interactive 3D scenography in the browser using three.js and cannon.js.
-        Developed in the Digital Experience Lab led by Daniele Tabellini, each group designed visuals to accompany text and performance.
-        My team built dynamic landsaoe such as the forest of spears that shifted throughout the show.
-        The software was released open source on GitHub.
-        <div class="button-row">
-            <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTATION</button>
-            <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">MORE INFO</button>`;
-
-    const testoSet14 = `<p>
-        Vivida is a startup concept that designs data visualization systems, merging data power with visual aesthetics to create interactive, real-time experiences. Its goal is to make data more human — accessible, emotional, and culturally relevant.
-        ENSI, one of Vivida’s prototypes, visualizes NASA’s meteorite data from the 9th century to today through an interactive globe with filters for location, mass, time, and mode, turning data into an immersive experience.
-        </p>
-        <div class="button-row">
-            <a href="https://vimeo.com/1125186622?share=copy" target="_blank" class="inline-button">VIEW PROJECT</button>`;
-    
-    //GESTIONE SET
     // Gestione set1 (Cluster)
     if (set === 'set1') {
         if (bottoneA?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet1) {
                 containerSet1.classList.remove('hidden');
                 randomizeImagePositions(containerSet1);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'Cluster';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet1;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottoneA) bottoneA.classList.add('selected');
-            aggiornaKeywords(['2024','Interaction','Experience Design','Motion Capture']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
@@ -1525,14 +1846,15 @@ function cambiaContenuto(set) {
         } else {
             resetAllContainers();
             if (containerSet2) {
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
                 containerSet2.classList.remove('hidden');
                 randomizeImagePositions(containerSet2);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'New Media Art';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet2;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottoneB) bottoneB.classList.add('selected');
-            aggiornaKeywords(['2022','Bachelor Project', 'Editorial','Archive Research']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
@@ -1542,13 +1864,14 @@ function cambiaContenuto(set) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet3) containerSet3.classList.remove('hidden');
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = '[8583 Hysterische Postkarten]';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet3;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottoneC) bottoneC.classList.add('selected');
             avviaRotazioneImmaginiSet3();
-            aggiornaKeywords(['2024','Interaction','Data Visualization','Creative Coding']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
@@ -1558,12 +1881,13 @@ function cambiaContenuto(set) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet4) containerSet4.classList.remove('hidden');
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = '\\m/ 10 PUNK PRINT \\m/';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet4;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottoneD) bottoneD.classList.add('selected');
-            aggiornaKeywords(['2024','Interaction','Creative Coding','Digital Research']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
@@ -1573,51 +1897,54 @@ function cambiaContenuto(set) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet5) {
                 containerSet5.classList.remove('hidden');
                 randomizeImagePositions(containerSet5);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'Circolo Del Design';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet5;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottoneE) bottoneE.classList.add('selected');
-            aggiornaKeywords(['2024','Visual Identity','Creative Coding','Video Editing']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-    // Gestione set6 (Nome Progetto)
+    // Gestione set6 (0721 Pesaro Zona Acustica)
     if (set === 'set6') {
         if (bottone6?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet6) {
                 containerSet6.classList.remove('hidden');
                 randomizeImagePositions(containerSet6);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = '0721 Pesaro Zona Acustica';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet6;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone6) bottone6.classList.add('selected');
-            aggiornaKeywords(['2023','Exhibition','Sound Design','Arduino']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-    // Gestione set7 (Nome Progetto)
+    // Gestione set7 (The North Face)
     if (set === 'set7') {
         if (bottone7?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet7) {
                 containerSet7.classList.remove('hidden');
                 randomizeImagePositions(containerSet7);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'The North Face';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet7;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone7) bottone7.classList.add('selected');
-            aggiornaKeywords(['2023','AI','Video Editing','Tehcnologic Research']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
@@ -1627,87 +1954,92 @@ function cambiaContenuto(set) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet8) {
                 containerSet8.classList.remove('hidden');
                 randomizeImagePositions(containerSet8);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'O`Family';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet8;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone8) bottone8.classList.add('selected');
-            aggiornaKeywords(['2022','Product','Sustainable Design','3D Modelling']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-    // Gestione set9 (Nome Progetto)
+    // Gestione set9 (A KIND OF HUMANITY)
     if (set === 'set9') {
         if (bottone9?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet9) {
                 containerSet9.classList.remove('hidden');
                 randomizeImagePositions(containerSet9);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'A KIND OF HUMANITY';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet9;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone9) bottone9.classList.add('selected');
-            aggiornaKeywords(['2025','Exhibition','AI','Visual Design']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-    // Gestione set10 (Nome Progetto)
+    // Gestione set10 (A-Tempo)
     if (set === 'set10') {
         if (bottone10?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet10) {
                 containerSet10.classList.remove('hidden');
                 randomizeImagePositions(containerSet10);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'A-Tempo';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet10;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone10) bottone10.classList.add('selected');
-            aggiornaKeywords(['2023','Interaction','3D Modelling','Arduino']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-    // Gestione set11 (Nome Progetto)
+    // Gestione set11 (ARCAICO)
     if (set === 'set11') {
         if (bottone11?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet11) {
                 containerSet11.classList.remove('hidden');
                 randomizeImagePositions(containerSet11);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'ARCAICO';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet11;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone11) bottone11.classList.add('selected');
-            aggiornaKeywords(['2024','Art Direction','Video Editing','Sound Design']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-    // Gestione set12 (MLU)
+    // Gestione set12 (Museo in Libera Uscita)
     if (set === 'set12') {
         if (bottone12?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet12) {
                 containerSet12.classList.remove('hidden');
                 randomizeImagePositions(containerSet12);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'Museo in Libera Uscita';
-            if (testoContenuto) testoContenuto.innerHTML = testoSet12;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone12) bottone12.classList.add('selected');
-            aggiornaKeywords(['2025','Manifesto','Art Direction','Graphic Design']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
@@ -1717,34 +2049,35 @@ function cambiaContenuto(set) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet13) {
                 containerSet13.classList.remove('hidden');
                 randomizeImagePositions(containerSet13);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'Inseguendo Orlando'; 
-            if (testoContenuto) testoContenuto.innerHTML = testoSet13;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone13) bottone13.classList.add('selected');
-            aggiornaKeywords(['2024','Digital Scenography','Interactive Visual','Creative Coding']);
+            aggiornaKeywords(project.keywords);
         }
     }
 
-
-// Gestione set14 (VIVIDA)
+    // Gestione set14 (VIVIDA)
     if (set === 'set14') {
         if (bottone14?.classList.contains('selected')) {
             resetAllContainers();
         } else {
             resetAllContainers();
+            if (languageToggle) languageToggle.classList.add('hidden'); // NUOVO
             if (containerSet14) {
                 containerSet14.classList.remove('hidden');
                 randomizeImagePositions(containerSet14);
             }
             if (imgMain) imgMain.classList.add('hidden');
-            if (titolo) titolo.textContent = 'VIVIDA'; 
-            if (testoContenuto) testoContenuto.innerHTML = testoSet14;
+            if (titolo) titolo.textContent = project.title;
+            if (testoContenuto) testoContenuto.innerHTML = project.text;
             if (bottone14) bottone14.classList.add('selected');
-            aggiornaKeywords(['2024','Interaction','Data Visualization','Web Application']);
+            aggiornaKeywords(project.keywords);
         }
     }
 }

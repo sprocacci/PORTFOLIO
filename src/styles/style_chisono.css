@@ -375,3 +375,48 @@ h1 {
   text-align: center;
   text-align-last: center;
 }
+
+/* Language Toggle */
+.language-toggle {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.lang-button {
+  font-family: 'M+1M', monospace;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.lang-button:hover {
+  text-decoration: underline;
+}
+
+.lang-button.active {
+  text-decoration: underline;
+}
+
+.lang-separator {
+  color: black;
+  pointer-events: none;
+}
+
+.language-toggle.hidden {
+  display: none !important;
+}
