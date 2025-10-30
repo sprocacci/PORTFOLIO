@@ -977,17 +977,36 @@ function caricaImmaginiJSON(callback) {
     xhr.overrideMimeType("application/json");
     xhr.open('GET', './image.json', true);
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            immaginiJSON = JSON.parse(xhr.responseText).map(item => item.URL);
-            callback();
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                try {
+                    immaginiJSON = JSON.parse(xhr.responseText).map(item => item.URL);
+                    console.log('JSON caricato con successo:', immaginiJSON.length, 'immagini');
+                    callback();
+                } catch (e) {
+                    console.error('Errore nel parsing del JSON:', e);
+                    callback(); // Chiama comunque il callback
+                }
+            } else {
+                console.error('Errore nel caricamento del JSON. Status:', xhr.status);
+                callback(); // Chiama comunque il callback
+            }
         }
+    };
+    xhr.onerror = function() {
+        console.error('Errore di rete nel caricamento del JSON');
+        callback();
     };
     xhr.send(null);
 }
 
 function selezionaImmagineCasuale() {
-    if (immaginiJSON.length === 0) return null;
+    if (immaginiJSON.length === 0) {
+        console.warn('Array immaginiJSON vuoto');
+        return null;
+    }
     var i = Math.floor(Math.random() * immaginiJSON.length);
+    console.log('Immagine selezionata:', i, '/', immaginiJSON.length);
     return immaginiJSON[i];
 }
 
@@ -995,24 +1014,49 @@ function avviaRotazioneImmaginiSet3() {
     const imgSet3 = document.getElementById('immagine-set3');
     if (!imgSet3) return;
     
-    // IMMAGINE SEGNAPOSTO - Sostituisci con il percorso della tua immagine
+    // IMMAGINE SEGNAPOSTO
     const immaginePlaceholder = 'immagini/set/placeholder_hysterische.jpg';
     
     // Mostra subito il placeholder
     imgSet3.src = immaginePlaceholder;
     
-    // Se le immagini JSON sono caricate, avvia la rotazione
-    if (immaginiJSON.length > 0) {
-        // Dopo un breve delay, passa alla prima immagine random
-        setTimeout(() => {
-            imgSet3.src = selezionaImmagineCasuale();
-        }, 100);
-        
-        // Poi avvia l'intervallo per cambiare le immagini
-        intervalloImmaginiSet3 = setInterval(() => {
-            imgSet3.src = selezionaImmagineCasuale();
-        }, 2000);
-    }
+    let retryCount = 0;
+    const maxRetries = 10; // Massimo 10 tentativi (5 secondi totali)
+    
+    // Funzione per iniziare la rotazione
+    const iniziaRotazione = () => {
+        if (immaginiJSON.length > 0) {
+            console.log('✅ Avvio rotazione immagini Set3 con', immaginiJSON.length, 'immagini');
+            
+            // Prima immagine dopo un breve delay
+            setTimeout(() => {
+                const nuovaImg = selezionaImmagineCasuale();
+                if (nuovaImg) {
+                    imgSet3.src = nuovaImg;
+                    console.log('Prima immagine caricata:', nuovaImg);
+                }
+            }, 500);
+            
+            // Poi avvia l'intervallo per cambiare le immagini
+            intervalloImmaginiSet3 = setInterval(() => {
+                const nuovaImg = selezionaImmagineCasuale();
+                if (nuovaImg) {
+                    imgSet3.src = nuovaImg;
+                }
+            }, 2000);
+        } else {
+            retryCount++;
+            if (retryCount < maxRetries) {
+                console.warn(`⏳ JSON non ancora caricato, riprovo tra 500ms... (tentativo ${retryCount}/${maxRetries})`);
+                setTimeout(iniziaRotazione, 500);
+            } else {
+                console.error('❌ Impossibile caricare il JSON dopo', maxRetries, 'tentativi');
+                // Mantieni il placeholder visibile
+            }
+        }
+    };
+    
+    iniziaRotazione();
 }
 
 function fermaRotazioneImmaginiSet3() {
@@ -1217,51 +1261,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     function showHoverVideo(videoKey) {
-        disableScroll();
-        
-        let displayVideo = document.getElementById('hover-video');
-        
-        // Se il video esiste già e corrisponde alla stessa key, riutilizzalo
-        if (displayVideo && displayVideo.dataset.videoKey === videoKey) {
-            displayVideo.style.display = 'block';
-            displayVideo.classList.add('fullscreen');
-            displayVideo.currentTime = 0;
-            displayVideo.play().catch(e => console.log('Play error:', e));
-            return;
-        }
-        
-        // Rimuovi il video esistente se diverso
-        if (displayVideo) {
-            displayVideo.remove();
-        }
-        
-        const video = videoCache[videoKey];
-        if (!video) {
-            console.error('Video non trovato:', videoKey);
-            return;
-        }
-        
-        // Usa direttamente il video dalla cache invece di clonarlo
-        displayVideo = video;
-        displayVideo.id = 'hover-video';
-        displayVideo.dataset.videoKey = videoKey;
+    disableScroll();
+    
+    let displayVideo = document.getElementById('hover-video');
+    
+    // Se il video esiste già e corrisponde alla stessa key, riutilizzalo
+    if (displayVideo && displayVideo.dataset.videoKey === videoKey) {
         displayVideo.style.display = 'block';
-        displayVideo.style.position = 'fixed';
-        displayVideo.style.left = '50%';
-        displayVideo.style.top = '50%';
-        displayVideo.style.transform = 'translate(-50%, -50%)';
-        displayVideo.style.maxWidth = '100%';
-        displayVideo.style.maxHeight = '100%';
         displayVideo.classList.add('fullscreen');
-        displayVideo.loop = true;
         displayVideo.currentTime = 0;
-        
-        if (!displayVideo.parentElement) {
-            document.body.appendChild(displayVideo);
-        }
-        
         displayVideo.play().catch(e => console.log('Play error:', e));
+        resizeVideoToFillViewport(displayVideo); // AGGIUNTO
+        return;
     }
+    
+    // Rimuovi il video esistente se diverso
+    if (displayVideo) {
+        displayVideo.remove();
+    }
+    
+    const video = videoCache[videoKey];
+    if (!video) {
+        console.error('Video non trovato:', videoKey);
+        return;
+    }
+    
+    // Usa direttamente il video dalla cache invece di clonarlo
+    displayVideo = video;
+    displayVideo.id = 'hover-video';
+    displayVideo.dataset.videoKey = videoKey;
+    displayVideo.style.display = 'block';
+    displayVideo.style.position = 'fixed';
+    displayVideo.classList.add('fullscreen');
+    displayVideo.loop = true;
+    displayVideo.currentTime = 0;
+    
+    if (!displayVideo.parentElement) {
+        document.body.appendChild(displayVideo);
+    }
+    
+    resizeVideoToFillViewport(displayVideo); // AGGIUNTO
+    
+    displayVideo.play().catch(e => console.log('Play error:', e));
+}
     
         function hideHoverMedia() {
         enableScroll();
@@ -1485,10 +1527,54 @@ document.addEventListener('DOMContentLoaded', function () {
             pre.onload = () => resizeImageToFillViewport(img, targetSrc);
         }
     }
-    window.addEventListener('resize', () => {
-        if (imgHover && imgHover.classList.contains('fullscreen')) {
-            resizeImageToFillViewport(imgHover, imgHover.src);
+
+    function resizeVideoToFillViewport(video) {
+    const vh = window.innerHeight;
+    const vw = window.innerWidth;
+    
+    // Aspetta che il video sia caricato per ottenere le dimensioni
+    const resize = () => {
+        if (video.videoWidth && video.videoHeight) {
+            const arVideo = video.videoWidth / video.videoHeight;
+            const arView = vw / vh;
+            let w, h;
+            
+            if (arVideo > arView) {
+                h = vh;
+                w = h * arVideo;
+            } else {
+                w = vw;
+                h = w / arVideo;
+            }
+            
+            video.style.width = w + 'px';
+            video.style.height = h + 'px';
+            video.style.left = '50%';
+            video.style.top = '50%';
+            video.style.transform = 'translate(-50%, -50%)';
+            video.style.position = 'fixed';
+            video.style.objectFit = 'cover';
+            video.style.minWidth = '100vw';
+            video.style.minHeight = '100vh';
+        } else {
+            // Se non è ancora caricato, riprova quando lo sarà
+            video.addEventListener('loadedmetadata', resize, { once: true });
         }
+    };
+    
+    resize();
+}
+
+    window.addEventListener('resize', () => {
+    if (imgHover && imgHover.classList.contains('fullscreen')) {
+        resizeImageToFillViewport(imgHover, imgHover.src);
+    }
+    
+    // AGGIUNTO - Resize video se presente
+    const displayVideo = document.getElementById('hover-video');
+    if (displayVideo && displayVideo.classList.contains('fullscreen')) {
+        resizeVideoToFillViewport(displayVideo);
+    }
         if (containerSet1 && !containerSet1.classList.contains('hidden')) randomizeImagePositions(containerSet1);
         if (containerSet2 && !containerSet2.classList.contains('hidden')) randomizeImagePositions(containerSet2);
         if (containerSet6 && !containerSet6.classList.contains('hidden')) randomizeImagePositions(containerSet6);
