@@ -19,6 +19,28 @@ function redirectTo10PPGitPage() {
     window.location.href = "https://github.com/sprocacci/archive-2024/tree/main/sprocacci/10_PRINT_VARIATION";
 }
 
+// Mobile Detection e Warning
+(function() {
+    function checkMobile() {
+        const mobileWarning = document.getElementById('mobile-warning');
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile && mobileWarning) {
+            mobileWarning.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        } else if (mobileWarning) {
+            mobileWarning.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Controlla al caricamento
+    document.addEventListener('DOMContentLoaded', checkMobile);
+    
+    // Controlla al resize (per tablet in rotazione)
+    window.addEventListener('resize', checkMobile);
+})();
+
 // ================= SISTEMA BILINGUE =================
 let currentLanguage = 'en'; // Lingua predefinita
 

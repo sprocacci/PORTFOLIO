@@ -420,3 +420,42 @@ h1 {
 .language-toggle.hidden {
   display: none !important;
 }
+
+/* Mobile Warning Overlay */
+.mobile-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-warning-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.mobile-warning-content h1 {
+    font-family: 'BASTARDO', serif;
+    font-size: 32px;
+    margin: 0;
+    position: static;
+    transform: none;
+}
+
+/* Mostra l'overlay su schermi piccoli */
+@media (max-width: 768px) {
+    .mobile-warning {
+        display: flex !important;
+    }
+    
+    /* Nascondi tutto il resto del contenuto */
+    body > *:not(.mobile-warning) {
+        display: none !important;
+    }
+}
