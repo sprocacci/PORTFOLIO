@@ -423,7 +423,7 @@ h1 {
 
 /* Mobile Warning Overlay */
 .mobile-warning {
-    display: none;
+    display: none; /* Nascosto di default su desktop */
     position: fixed;
     top: 0;
     left: 0;
@@ -448,7 +448,7 @@ h1 {
     transform: none;
 }
 
-/* Mostra l'overlay su schermi piccoli */
+/* Mostra l'overlay IMMEDIATAMENTE su schermi piccoli */
 @media (max-width: 768px) {
     .mobile-warning {
         display: flex !important;
