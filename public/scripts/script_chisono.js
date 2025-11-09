@@ -26,12 +26,13 @@ const translations = {
     en: {
         mainTitle: 'Who I am',
         mainText: `<p>
-        Hello!
-        <br />I'm Sirio Procacci and I'm a designer fresh out of University. 
+        Hello! I'm Sirio Procacci and I'm a designer fresh out of University. 
         I did my Bachelor's in Industrial and Environmental Design at the SAAD, three years of sketching, prototyping, and surviving deadlines.
-        Then I jumped into a Master's in Interaction and Experience Design at the UNIRSM, where I fell down the rabbit hole of UX, interfaces, and way too many post-its (sigh).
-        I'm a designer who's into beautiful things, good photos, and fast bikes.
-        This site is my little corner of the internet. Go to full screen, take a look around and click stuff. XOXO.
+        Then I jumped into a Master's in Interaction and Experience Design at the UNIRSM, where I fell down the rabbit hole of UX, weird exhibition and way too many post-its (sigh).
+        <br />
+        <br />- enter FULL SCREEN;
+        <br />- CLICK and move the mouse to look around;
+        <br />- SCROLL to see projects.
         <div class="button-row">
           <a href="mailto:sirio.procacci@outlook.com" class="button-row:">HIT ME UP!</a>
         </div>`,
@@ -79,8 +80,8 @@ const translations = {
             set4: {
                 title: '\\m/ 10 PUNK PRINT \\m/',
                 text: `<p>
-                This project takes inspiration from the classic "10 PRINT" code to explore randomness, creativity, and digital complexity. 
-                By turning videos into visual patterns, it investigates new forms of representation that make content harder to identify or censor.
+                This project draws inspiration from the "10 PRINT" code to explore randomness, creativity, and digital complexity.
+                By transforming videos into visual patterns, the application investigates new forms of representation through content that is harder to identify or censor.
                 The app only supports .mp4 video so please don't be an a**hole!
                 <br />If you've been a good boy, now you can play with colors and patterns! Who's my good boy?
                 <br />
@@ -121,11 +122,9 @@ const translations = {
             set7: {
                 title: 'The North Face',
                 text: `<p>
-                "Can AI Unlock Your Creativity?" was a workshop on Artificial Intelligence led by 
-                <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>'s 
-                Art Director and Creative Technologist.
-                By the end, I had grasped AI fundamentals, learned tools like Midjourney, and created a short film combining several AI systems. 
-                The video was produced in a vertical format for mobile viewing as a reel for the launch of three new products designed by The North Face.
+                "Can AI Unlock Your Creativity?" was a workshop on Artificial Intelligence led by the Art Director and Creative Technologist at <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>.
+                AI tools such as Midjourney and Stable Diffusion were used, and I eventually created a short film combining the different outputs.
+                The video was produced in a vertical format for mobile viewing, as a reel for the launch of three new The North Face products.
                 <br />
                 <div class="button-row">
                     <a href="https://vimeo.com/1125189923?share=copy" target="_blank" class="inline-link">VIEW PROJECT</a>`,
@@ -134,10 +133,10 @@ const translations = {
             set8: {
                 title: 'O`Family',
                 text: `<p>
-                O'Bucket is a product-service tackling pollution caused by Expanded Polystyrene (EPS) in the seafood market. 
-                It reuses the material's air cavities for thermal insulation, while its modular design makes it easy to disassemble and reuse.
-                Thanks to its vacuum return service, O'Bucket eliminates single-use waste. 
-                Designed for sustainability, it will be submitted for the 2024 James Dyson Award in line with EU Directive 2019/904.
+                O'Bucket is a product-service designed to address pollution caused by Expanded Polystyrene (EPS) in the fish market.
+                It features an internal cavity that ensures thermal insulation, while its modular design makes it easy to disassemble and reuse.
+                Thanks to its returnable deposit system, O'Bucket eliminates single-use waste.
+                Developed with sustainability in mind, it was presented at the 2024 James Dyson Award in line with EU Directive 2019/904.
                 <div class="button-row">`,
                 keywords: ['2022','Product','Sustainable Design','3D Modelling']
             },
@@ -177,7 +176,7 @@ const translations = {
                 title: 'Museo in Libera Uscita',
                 text: `<p>
                 The project involved designing and displaying three large posters on the main facade of Turin's Alberto Geisser, Natalia Ginzburg, and Dietrich Bonhoeffer libraries.
-                The exhibition     
+                The project    
                 <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
                 was realized under the art direction of 
                 <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
@@ -188,11 +187,9 @@ const translations = {
             set13: {
                 title: 'Inseguendo Orlando',
                 text: `<p>
-                Chasing Orlando is a theatrical comedy inspired by Ludovico Ariosto's Orlando Furioso, staged at La Fenice Theatre in Senigallia (June 2024).
-                The project focused on creating live interactive 3D scenography in the browser using three.js and cannon.js.
-                Developed in the Digital Experience Lab led by Daniele Tabellini, each group designed visuals to accompany text and performance.
-                My team built dynamic landsaoe such as the forest of spears that shifted throughout the show.
-                The software was released open source on GitHub.
+                Inseguendo Orlando is a theatrical comedy inspired by Orlando Furioso by Ludovico Ariosto, staged at Teatro La Fenice in Senigallia.
+                The project focused on creating interactive 3D scenography using three.js and cannon.js.
+                Developed within the Digital Experience Lab led by Daniele Tabellini, my team designed dynamic landscapes, including a forest of lances that transformed throughout the performance.
                 <div class="button-row">
                     <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTATION</button>
                     <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">MORE INFO</button>`,
@@ -201,8 +198,8 @@ const translations = {
             set14: {
                 title: 'VIVIDA',
                 text: `<p>
-                Vivida is a startup concept that designs data visualization systems, merging data power with visual aesthetics to create interactive, real-time experiences. Its goal is to make data more human — accessible, emotional, and culturally relevant.
-                ENSI, one of Vivida's prototypes, visualizes NASA's meteorite data from the 9th century to today through an interactive globe with filters for location, mass, time, and mode, turning data into an immersive experience.
+                Vivida is a startup concept that designs data visualization systems, combining technical precision with visual aesthetics to create interactive experiences that make data more human and accessible.
+                One of Vivida’s projects, ENSI, presents NASA’s database of meteorites that have fallen to Earth from the 9th century to the present day through an interactive globe with filters for location, mass, and time period.
                 </p>
                 <div class="button-row">
                     <a href="https://vimeo.com/1125186622?share=copy" target="_blank" class="inline-button">VIEW PROJECT</button>`,
@@ -213,12 +210,13 @@ const translations = {
     it: {
         mainTitle: 'Chi sono',
         mainText: `<p>
-        Ciao!
-        <br />Sono Sirio Procacci e sono un designer appena uscito dall'Università.
+        Ciao! Sono Sirio Procacci e sono un designer appena uscito dall'Università.
         Ho fatto la triennale in Design Industriale e Ambientale alla SAAD, tre anni tra schizzi, prototipi e deadline infinite.
-        Poi mi sono buttato in una Magistrale in Interaction ed Experience Design all'UNIRSM, dove sono finito nella tana del bianconiglio tra UX, interfacce e troppi post-it (sigh).
-        Sono un designer appassionato di cose belle, belle foto e moto veloci.
-        Questo sito è il mio piccolo angolo di internet. Vai a schermo intero, guardati intorno e clicca su tutto. XOXO.
+        Poi mi sono buttato in una Magistrale di Interaction ed Experience Design all'UNIRSM, dove sono caduto nella tana del bianconiglio tra UX, allestimenti strambi e troppi post-it (sigh).  
+        <br />
+        <br />- vai a SCHERMO INTERO;
+        <br />- CLICCA e usa il mouse per visualizare;
+        <br />- SCROLLA per scoprire i progetti.
         <div class="button-row">
           <a href="mailto:sirio.procacci@outlook.com" class="button-row:">SCRIVIMI!</a>
         </div>`,
@@ -242,7 +240,7 @@ const translations = {
                 <a href="https://www.ulissegallery.com/index.html" target="_blank" class="inline-link">Ulisse Gallery Contemporary Art</a>
                  a Roma, uno spazio espositivo di 350 m² vicino a Piazza di Spagna.
                  La galleria ha collaborato con importanti artisti internazionali, tra cui il Maestro Ugo Attardi, del quale custodisce l'Archivio Storico.
-                Il progetto è stato selezionato durante il festival tra le 100 opere innovative a NEOLOGIA, Graphic Days 2023 a Torino.
+                Il progetto è stato selezionato durante il festival tra i 100 progetti più innovativi a NEOLOGIA, Graphic Days 2023 a Torino.
                 <br /><br /><a href="https://www.graphicdays.it/neologia/new-media-art-come-il-computer-ha-rivoluzionato-il-mondo-sirio-procacci/()" target="_blank" class="inline-button">VEDI PROGETTO</button>
                 <div class="button-row"> `,
                 keywords: ['2022','Tesi Triennale', 'Editoriale','Ricerca Archivistica']
@@ -266,8 +264,8 @@ const translations = {
             set4: {
                 title: '\\m/ 10 PUNK PRINT \\m/',
                 text: `<p>
-                Questo progetto trae ispirazione dal classico codice "10 PRINT" per esplorare casualità, creatività e complessità digitale.
-                Trasformando video in pattern visivi, indaga nuove forme di rappresentazione che rendono i contenuti più difficili da identificare o censurare.
+                Questo progetto trae ispirazione dalla stringa "10 PRINT" per esplorare casualità, creatività e complessità digitale.
+                Trasformando video in pattern visivi, l'applicativo indaga nuove forme di rappresentazione attraverso contenuti più difficili da identificare o censurare.
                 L'app supporta solo video .mp4, quindi per favore non fare lo str**zo!
                 <br />Se sei stato bravo, ora puoi giocare con colori e pattern! Chi è il mio bravo ragazzo?
                 <br />
@@ -310,7 +308,7 @@ const translations = {
                 text: `<p>
                 "Can AI Unlock Your Creativity?" è stato un workshop sull'Intelligenza Artificiale condotto dall'Art Director e Creative Technologist di
                 <a href="https://monogrid.com/en" target="_blank" class="inline-link">MONOGRID</a>.
-                Alla fine, avevo compreso i fondamenti dell'AI, imparato strumenti come Midjourney e creato un cortometraggio combinando diversi sistemi di AI.
+                Sono stati utilizzati strumenti di AI come Midjourney e Stable Diffusion e, infine, ho realizzato un cortometraggio combinando i diversi contenuti.
                 Il video è stato prodotto in formato verticale per la visione mobile come reel per il lancio di tre nuovi prodotti di The North Face.
                 <br />
                 <div class="button-row">
@@ -320,10 +318,10 @@ const translations = {
             set8: {
                 title: 'O`Family',
                 text: `<p>
-                O'Bucket è un prodotto-servizio che affronta l'inquinamento causato dal Polistirene Espanso (EPS) nel mercato ittico.
-                Riutilizza le cavità d'aria del materiale per l'isolamento termico, mentre il suo design modulare lo rende facile da smontare e riutilizzare.
-                Grazie al servizio di restituzione sottovuoto, O'Bucket elimina i rifiuti usa e getta.
-                Progettato per la sostenibilità, sarà presentato al James Dyson Award 2024 in linea con la Direttiva UE 2019/904.
+                O'Bucket è un prodotto-servizio che risponde all'inquinamento causato dal Polistirene Espanso (EPS) nel mercato ittico.
+                Utilizza una cavità interna per garantire l'isolamento termico, mentre il suo design modulare lo rende facile da smontare e riutilizzare.
+                Grazie al servizio di vuoto a rendere, O'Bucket elimina i rifiuti usa e getta.
+                Progettato per la sostenibilità, è stato presentato al James Dyson Award 2024 in linea con la Direttiva UE 2019/904.
                 <div class="button-row">`,
                 keywords: ['2022','Prodotto','Design Sostenibile','Modellazione 3D']
             },
@@ -363,7 +361,7 @@ const translations = {
                 title: 'Museo in Libera Uscita',
                 text: `<p>
                 Il progetto ha previsto la progettazione e l'esposizione di tre grandi manifesti sulla facciata principale delle biblioteche Alberto Geisser, Natalia Ginzburg e Dietrich Bonhoeffer di Torino.
-                La mostra
+                Il progetto
                 <a href="https://www.museoantropologia.unito.it/museo-in-libera-uscita/" target="_blank" class="inline-link">Museo in Libera Uscita</a>
                 è stata realizzata sotto la direzione artistica di
                 <a href="https://www.studiograndhotel.it/" target="_blank" class="inline-link">Studio Grand Hotel</a>.
@@ -374,11 +372,9 @@ const translations = {
             set13: {
                 title: 'Inseguendo Orlando',
                 text: `<p>
-                Inseguendo Orlando è una commedia teatrale ispirata all'Orlando Furioso di Ludovico Ariosto, messa in scena al Teatro La Fenice di Senigallia (giugno 2024).
-                Il progetto si è concentrato sulla creazione di scenografie 3D interattive dal vivo nel browser usando three.js e cannon.js.
-                Sviluppato nel Digital Experience Lab guidato da Daniele Tabellini, ogni gruppo ha progettato visual per accompagnare testo e performance.
-                Il mio team ha costruito paesaggi dinamici come la foresta di lance che si trasformava durante lo spettacolo.
-                Il software è stato rilasciato open source su GitHub.
+                Inseguendo Orlando è una commedia teatrale ispirata all'Orlando Furioso di Ludovico Ariosto, messa in scena al Teatro La Fenice di Senigallia.
+                Il progetto si è concentrato sulla realizzazione di scenografie 3D interattive attraverso gli strumenti three.js e cannon.js.
+                Sviluppato nel Digital Experience Lab guidato da Daniele Tabellini, il mio team ha progettato paesaggi dinamici come il bosco di lance che si trasformava durante lo spettacolo.
                 <div class="button-row">
                     <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia" target="_blank" class="inline-button">DOCUMENTAZIONE</button>
                     <a href="https://github.com/del-2024-unirsm/three-sessions-2024-senigallia/wiki/2.-Paesaggi" target="_blank" class="inline-button">PIÙ INFO</button>`,
@@ -387,9 +383,9 @@ const translations = {
             set14: {
                 title: 'VIVIDA',
                 text: `<p>
-                Vivida è un concept di startup che progetta sistemi di visualizzazione dati, unendo la potenza dei dati con l'estetica visiva per creare esperienze
-                interattive in tempo reale. Il suo obiettivo è rendere i dati più umani — accessibili, emotivi e culturalmente rilevanti.
-                ENSI, uno dei prototipi di Vivida, visualizza i dati dei meteoriti della NASA dal IX secolo a oggi attraverso un globo interattivo con filtri per posizione, massa, tempo e modalità, trasformando i dati in un'esperienza immersiva.
+                Vivida è un concept di startup che progetta sistemi di visualizzazione dati, unisce tecnica ed estetica visiva per creare esperienze
+                interattive col fine di rendere i dati più umani e accessibili:
+                ENSI, uno dei progetti di Vivida, mostra il database della NASA dei meteoriti caduti sulla terra dal IX secolo a oggi attraverso un globo interattivo con filtri per posizione, massa e periodo.
                 </p>
                 <div class="button-row">
                     <a href="https://vimeo.com/1125186622?share=copy" target="_blank" class="inline-button">VEDI PROGETTO</button>`,
