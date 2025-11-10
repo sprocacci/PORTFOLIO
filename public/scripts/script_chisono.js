@@ -904,42 +904,25 @@ function aggiungiBottone(testo, funzioneCallback, indice) {
 
 // ================= SCROLL LOCK =================
 function disableScroll() {
-    // Calcola la larghezza della scrollbar PRIMA di nasconderla
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    
-    // Applica overflow hidden
     document.body.style.overflow = 'hidden';
     
-    // Compensa lo shift SOLO per gli elementi fixed centrati
     if (scrollbarWidth > 0) {
         const titolo = document.getElementById('titolo-h1');
-        const languageToggle = document.getElementById('language-toggle');
         
         if (titolo) {
-            // Mantieni il titolo centrato compensando metà della scrollbar
             titolo.style.transform = `translateX(calc(-50% - ${scrollbarWidth / 2}px))`;
-        }
-        
-        if (languageToggle) {
-            // Mantieni il selettore lingua centrato
-            languageToggle.style.transform = `translateX(calc(-50% - ${scrollbarWidth / 2}px))`;
         }
     }
 }
 
 function enableScroll() {
-    // Ripristina tutto
     document.body.style.overflow = '';
     
     const titolo = document.getElementById('titolo-h1');
-    const languageToggle = document.getElementById('language-toggle');
     
     if (titolo) {
         titolo.style.transform = 'translateX(-50%)';
-    }
-    
-    if (languageToggle) {
-        languageToggle.style.transform = 'translateX(-50%)';
     }
 }
 
