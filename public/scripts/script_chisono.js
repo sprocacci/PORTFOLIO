@@ -29,7 +29,6 @@ const translations = {
         Hello! I'm Sirio Procacci and I'm a designer fresh out of University and I deal with interactive things, installations and graphics.
         I did my Bachelor's in Industrial and Environmental Design at the SAAD, three years of sketching, prototyping, and surviving deadlines.
         Then I jumped into a Master's in Interaction and Experience Design at the UNIRSM, where I fell down the rabbit hole of UX, weird exhibition and way too many post-its (sigh).
-        This is my little corner of the internet.
         <br />
         <br />- enter FULL SCREEN;
         <br />- CLICK and move the mouse to look around;
@@ -212,9 +211,8 @@ const translations = {
         mainTitle: 'Chi sono',
         mainText: `<p>
         Ciao! Sono Sirio Procacci e sono un designer appena uscito dall'Università  e mi occupo di cose interattive, allestimenti e grafica.
-        Ho fatto la triennale in Design Industriale e Ambientale alla SAAD, tre anni tra schizzi, prototipi e deadline infinite.
+        Ho fatto la Triennale in Design Industriale e Ambientale alla SAAD, tre anni tra schizzi, prototipi e deadline infinite.
         Poi mi sono lanciato in una Magistrale di Interaction ed Experience Design all'UNIRSM, dove sono caduto nella tana del bianconiglio tra UX, allestimenti strambi e troppi post-it (sigh).
-        Questo è il mio piccolo angolo di Internet.
         <br />
         <br />- vai a SCHERMO INTERO;
         <br />- CLICCA e usa il mouse per visualizare;
