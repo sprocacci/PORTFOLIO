@@ -81,7 +81,7 @@ const translations = {
                 title: '\\m/ 10 PUNK PRINT \\m/',
                 text: `<p>
                 This project draws inspiration from the "10 PRINT" code to explore randomness, creativity, and digital complexity.
-                By transforming videos into visual patterns, the application investigates new forms of representation through content that is harder to identify or censor.
+                By transforming videos into visual patterns, the application investigates new forms of representation through content that is hard to censor.
                 The app only supports .mp4 video so please don't be an a**hole!
                 <br />If you've been a good boy, now you can play with colors and patterns! Who's my good boy?
                 <br />
@@ -145,7 +145,9 @@ const translations = {
                 text: `<p>
                 "A Kind of Humanity is an interactive installation that invites silence, reflection, and introspection. 
                 At its center burns a fire, a symbol of energy and collective connection, that reacts to visitors' voices.
-                Using Hume AI, the system analyzes vocal emotions and reshapes its form in response, creating a dialogue between humans and space.
+                Using 
+                <a href="https://www.hume.ai/" target="_blank" class="inline-link">HUME AI</a>, 
+                the system analyzes vocal emotions and reshapes its form in response, creating a dialogue between humans and space.
                 Inspired by the intimacy of the hearth, the piece reimagines communication as an emotional, ancestral experience.
                 <br /></p>
                 <div class="button-row">`,
@@ -164,10 +166,15 @@ const translations = {
             set11: {
                 title: 'ARCAICO',
                 text: `<p>
-               This short film explores the soul of Eduardo Souto De Moura's Vatican Chapel for the Distributed 
-                <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Pavilion of the Holy See</a>
-                at the 16th Venice Architecture Biennale. 
-                The film reflects on materiality, geometry, and time, recurring themes in De Moura's work, to reveal an aesthetic suspended between the sacred and the ancient.
+                The short film, created for the
+                <a href="https://www.cini.it/" target="_blank" class="inline-link">Fondazione Giorgio Cini</a>,
+                explores the spirit of Eduardo Souto De Moura’s Vatican Chapel, part of the
+                <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Holy See’s Distributed Pavilion</a>
+                at the 16th Venice Architecture Biennale.
+                Materiality, geometry, and time—recurring themes in De Moura’s work—emerge through a meticulous visual and sonic exploration.
+                The framing and sound design, developed in collaboration with the
+                <a href="https://www.biovision.ch/en/soundingsoil/soundmap/" target="_blank" class="inline-link">Sounding Soil</a> project,
+                evoke an aesthetic suspended between the sacred and the ancient.
                 <div class="button-row">
                 <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VIEW PROJECT</button>`,
                 keywords: ['2024','Art Direction','Video Editing','Sound Design']
@@ -264,8 +271,8 @@ const translations = {
             set4: {
                 title: '\\m/ 10 PUNK PRINT \\m/',
                 text: `<p>
-                Questo progetto trae ispirazione dalla stringa "10 PRINT" per esplorare casualità, creatività e complessità digitale.
-                Trasformando video in pattern visivi, l'applicativo indaga nuove forme di rappresentazione attraverso contenuti più difficili da identificare o censurare.
+                IL progetto trae ispirazione dalla stringa "10 PRINT" per esplorare casualità, creatività e complessità digitale.
+                Trasformando video in pattern visivi, l'applicativo indaga nuove forme di rappresentazione attraverso contenuti difficili da censurare.
                 L'app supporta solo video .mp4, quindi per favore non fare lo str**zo!
                 <br />Se sei stato bravo, ora puoi giocare con colori e pattern! Chi è il mio bravo ragazzo?
                 <br />
@@ -330,7 +337,9 @@ const translations = {
                 text: `<p>
                 "A Kind of Humanity" è un'installazione interattiva che invita al silenzio, alla riflessione e all'introspezione.
                 Al suo centro arde un fuoco, simbolo di energia e connessione collettiva, che reagisce alle voci dei visitatori.
-                Usando Hume AI, il sistema analizza le emozioni vocali e rimodella la sua forma in risposta, creando un dialogo tra umani e spazio.
+                Usando 
+                <a href="https://www.hume.ai/" target="_blank" class="inline-link">HUME AI</a>, 
+                il sistema analizza le emozioni vocali e rimodella la sua forma in risposta, creando un dialogo tra umani e spazio.
                 Ispirata all'intimità del focolare, l'opera reinterpreta la comunicazione come un'esperienza emotiva e ancestrale.
                 <br /></p>
                 <div class="button-row">`,
@@ -349,10 +358,15 @@ const translations = {
             set11: {
                 title: 'ARCAICO',
                 text: `<p>
-               Questo cortometraggio esplora l'anima della Cappella Vaticana di Eduardo Souto De Moura per il
+                Il cortometraggio, realizzato per la 
+                <a href="https://www.cini.it/" target="_blank" class="inline-link">Fondazione Giorgio Cini</a>, 
+                esplora l'anima della Cappella Vaticana di Eduardo Souto De Moura per il
                 <a href="https://www.cini.it/eventi/vatican-chapels-padiglione-della-santa-sede-alla-16-mostra-internazionale-di-architettura/" target="_blank" class="inline-link">Padiglione Distribuito della Santa Sede</a>
-                alla 16ª Biennale di Architettura di Venezia.
-                Il film riflette su materialità, geometria e tempo, temi ricorrenti nell'opera di De Moura, per rivelare un'estetica sospesa tra il sacro e l'antico.
+                alla 16ª Biennale di Architettura di Venezia. 
+                Materialità, geometria e tempo, temi ricorrenti nell'opera di De Moura, emergono da un'attenta ricerca visiva e sonora: 
+                le inquadrature e i suoni, sviluppati grazie al progetto
+                <a href="https://www.biovision.ch/en/soundingsoil/soundmap/" target="_blank" class="inline-link">Sounding Soil</a>, 
+                evocano un'estetica sospesa tra il sacro e l'antico.
                 <div class="button-row">
                 <a href="https://vimeo.com/1025145739" target="_blank" class="inline-button">VEDI PROGETTO</button>`,
                 keywords: ['2024','Direzione Artistica','Video Editing','Sound Design']
