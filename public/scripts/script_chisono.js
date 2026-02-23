@@ -35,7 +35,7 @@ const translations = {
         <br />- SCROLL to see projects.
         <div class="button-row">
           <a href="mailto:sirio.procacci@outlook.com" class="button-row:">HIT ME UP!</a>
-          <a href="dist/file/CV_SirioProcacciEN1125.pdf" download class="button-row:">DOWNLOAD RESUME</a>
+          <a href="file/CV_SirioProcacciEN1125.pdf" download class="button-row:">DOWNLOAD RESUME</a>
         </div>`,
         
         projects: {
@@ -227,7 +227,7 @@ const translations = {
         <br />- SCROLLA per scoprire i progetti.
         <div class="button-row">
           <a href="mailto:sirio.procacci@outlook.com" class="button-row:">SCRIVIMI!</a>
-          <a href="dist/file/CV_SirioProcacciIT1125.pdf" download class="button-row:">DOWNLOAD CURRICULUM</a>
+          <a href="file/CV_SirioProcacciIT1125.pdf" download class="button-row:">DOWNLOAD CURRICULUM</a>
         </div>`,
         
         projects: {
