@@ -26,9 +26,19 @@ const translations = {
     en: {
         mainTitle: 'Who I am',
         mainText: `<p>
-        Hello! I'm Sirio Procacci and I'm a designer fresh out of University and I deal with interactive things, installations and graphics.
-        I did my Bachelor's in Industrial and Environmental Design at the SAAD, three years of sketching, prototyping, and surviving deadlines.
-        Then I jumped into a Master's in Interaction and Experience Design at the UNIRSM, where I fell down the rabbit hole of UX, weird exhibition and way too many post-its (sigh).
+        Hi!
+        I'm Sirio Procacci, a designer from 
+        <a href="https://www.google.com/maps/place/64100+Teramo+TE/@42.739287,12.309783,7.81z/data=!4m6!3m5!1s0x1331e7f3308c4aa3:0x3406d617b9391a6b!8m2!3d42.6611431!4d13.6986639!16zL20vMDQ0c3Fo?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-link">Teramo</a>, 
+        a small city in the Abruzzo region of Italy that you've probably never heard of—but yes, it exists, and it also produces designers.
+        I studied Industrial and Environmental Design in 
+        <a href="https://www.google.com/maps/place/Ascoli+Piceno/@42.8536947,12.7383746,9z/data=!4m6!3m5!1s0x13296f44fcb1f6b1:0x40781e2c8e7b8f0!8m2!3d42.8535882!4d13.5732475!16zL20vMDI0N2hu" target="_blank" class="inline-link">Ascoli Piceno</a> 
+        at SAAD, before continuing my academic journey in 
+        <a href="https://www.google.com/maps/place/San+Marino/@43.9352313,12.4467607,12z" target="_blank" class="inline-link">San Marino</a>, 
+        where I earned a Master's degree in Interaction & Experience Design at UNIRSM.
+        During those years, I had the opportunity to collaborate with Fondazione Zimei in 
+        <a href="https://www.google.com/maps/place/Pescara+PE/@42.4617624,14.2160321,12z" target="_blank" class="inline-link">Pescara</a>, 
+        an experience that introduced me to the world of contemporary art and cultural design—a field where people work a lot, sleep very little, and still manage to do it with style.
+        My practice focuses on visual, product, and exhibition design.
         <br />
         <br />- enter FULL SCREEN;
         <br />- CLICK and move the mouse to look around;
@@ -218,9 +228,19 @@ const translations = {
     it: {
         mainTitle: 'Chi sono',
         mainText: `<p>
-        Ciao! Sono Sirio Procacci e sono un designer appena uscito dall'Università  e mi occupo di cose interattive, allestimenti e grafica.
-        Ho fatto la Triennale in Design Industriale e Ambientale alla SAAD, tre anni tra schizzi, prototipi e deadline infinite.
-        Poi mi sono lanciato in una Magistrale di Interaction ed Experience Design all'UNIRSM, dove sono caduto nella tana del bianconiglio tra UX, allestimenti strambi e troppi post-it (sigh).
+        Ciao!
+        Sono Sirio Procacci, designer, e vengo da 
+        <a href="https://www.google.com/maps/place/64100+Teramo+TE/@42.739287,12.309783,7.81z/data=!4m6!3m5!1s0x1331e7f3308c4aa3:0x3406d617b9391a6b!8m2!3d42.6611431!4d13.6986639!16zL20vMDQ0c3Fo?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-link">Teramo</a>, 
+        una città dell'Abruzzo che probabilmente non conosci, ma che esiste e produce anche designer.
+        Ho studiato Design Industriale e Ambientale ad 
+        <a href="https://www.google.com/maps/place/64100+Teramo+TE/@42.739287,12.309783,7.81z/data=!4m6!3m5!1s0x1331e7f3308c4aa3:0x3406d617b9391a6b!8m2!3d42.6611431!4d13.6986639!16zL20vMDQ0c3Fo?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-link">Ascoli Piceno</a> 
+        presso la SAAD, per poi proseguire il mio percorso a 
+        <a href="https://www.google.com/maps/place/San+Marino/@43.5190949,6.576968,5z/data=!4m6!3m5!1s0x132ceb5ff5e63f79:0xf39982342010!8m2!3d43.9352313!4d12.4467607!16zL20vMDZzZmY?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D"_blank" class="inline-link">San Marino</a> 
+        con la laurea magistrale in Interaction & Experience Design all'UNIRSM.
+        Durante questi anni ho avuto modo di collaborare con Fondazione Zimei a 
+        <a href="https://www.google.com/maps/place/Pescara+PE/@42.2149842,12.3487484,6.91z/data=!4m6!3m5!1s0x1331a60db9286477:0xa0b89e89b22cbfe2!8m2!3d42.4617624!4d14.2160321!16zL20vMDNmMmhj?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" class="inline-link">Pescara</a>
+        un'esperienza che mi ha introdotto al mondo dell'arte contemporanea e della progettazione culturale: un settore in cui si lavora molto e si dorme poco, ma sempre con stile.
+        Mi occupo di visual, product ed exhibit design.
         <br />
         <br />- vai a SCHERMO INTERO;
         <br />- CLICCA e usa il mouse per visualizare;
